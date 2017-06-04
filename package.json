@@ -1,0 +1,38 @@
+{
+  "name": "digiopsdotme",
+  "version": "2.0.0",
+  "description": "Personal website for myself.",
+  "main": "/assets/react/index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digi0ps/digiopsdotme.git"
+  },
+  "keywords": [
+    "digiops",
+    "digi0ps",
+    "sriram",
+    "digiopsdotme",
+    "blog",
+    "django",
+    "react",
+    "webpack"
+  ],
+  "author": "digi0ps",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digi0ps/digiopsdotme/issues"
+  },
+  "homepage": "https://github.com/digi0ps/digiopsdotme#readme",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "react-scripts": "^1.0.7"
+  }
+}

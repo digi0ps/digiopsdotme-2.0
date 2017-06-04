@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}
+	Blog
+{% endblock title %}
+{% block desc %}
+	Sriram's blog. :)
+{% endblock desc %}
+{% block blogactive %}active{% endblock blogactive %}
+{% block navcolor %}#4CAF50{% endblock navcolor %}
+{% block body %}
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
+	.article {
+		background: #f7faff;
+		padding: 5px;
+		margin-bottom: 30px;
+		border-radius: 5px;
+		box-shadow:5px 5px 10px #aaa;
+	}
+	.article:nth-child(1) {
+		margin-top: 10px;
+	}
+	.article:nth-last-child(1) {
+		margin-bottom: 100px;
+	}
+	.article h3{
+		color: #4CAF50;
+		font-family: 'Montserrat', sans-serif;
+		margin-bottom: 5px;
+	}
+	.content p{
+		font-family: 'Lato', sans-serif;
+		font-size: 16px;
+	}
+	.smalls {
+		color: #9E9E9E;
+		font-size: 13px;
+	}
+	.article div{
+		color: #37474F;
+		margin-top: 5px;
+	}
+	.content a{
+		font-size: 16px;
+		color: #8BC34A;
+		text-decoration: none;
+	}
+	.content a:hover{
+		color: #558B2F;
+	}
+	@media (min-width: 400px){
+		.content p{
+			font-size: 20px;
+		}
+		.content a{
+			font-size: 20px;
+		}
+	}
+	
+</style>
+{% load bleach_tags %}
+<div class="container">
+	<div class="row">
+	{% for article in articles %}
+		<div class="article col-xs-12 col-sm-10 col-sm-offset-1" id="art{{ article.id }}">
+			<div class="container-fluid">
+			<div class="row">
+
+				<div class="col-xs-12 text-center">
+	 			<h3 class="title">{{ article.title }}</h3>
+	 			</div>
+
+	 			<div class="col-xs-8 text-left">
+	 			<p class="smalls">Posted {{article.posted_time|timesince}} ago</p>
+				</div>
+				<div class="col-xs-4 text-right">
+	 			<p class="smalls">Views: {{ article.views }}</p>
+	 			</div>
+
+	 			<div class="lead content col-xs-12">
+	 			{{ article.content|bleach|truncatechars:300 }}
+	 			<br>
+	 			<a href="{% url 'article' article.id %}" class="article-link">Continue Reading...</a>
+	 			</div>
+	 		</div>
+	 		</div>
+		</div> 
+	{% endfor %}
+	</div>
+</div>
+{% endblock body %}
+
+

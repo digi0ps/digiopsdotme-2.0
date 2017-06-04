@@ -1,0 +1,53 @@
+{% extends "blog/admin_base.html" %}
+{% block title %}
+	digi-admin
+{% endblock title %}
+{% block navcolor %}#2f2f2f{% endblock navcolor %}
+{% block body %}
+<style>
+h3{
+	margin-top: 0;
+}
+.wrapper {
+	margin-bottom: 100px;
+}
+
+</style>
+	<div class="container wrapper">
+	<div class="row">
+	<br><br>
+	<div class="col-xs-12 text-center">
+	<h3 class="lead">Create Post</h3>
+	</div>
+	<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+	<form method="POST" action="{% url 'blog_post' %}">
+		{% csrf_token %}
+		<div class="form-group text-center">
+			<input type="text" class="form-control" id="title" name="title" placeholder="Enter the title of your article.">
+		</div>
+		<br>
+		<textarea id="content" name="content"></textarea>
+		<br>
+		<div class="col-xs-2 col-xs-offset-5">
+		<button type="submit" class="btn btn-large btn-success">POST</button>
+		</div>
+	</form>
+	</div>
+	</div>
+	</div>
+{% endblock body %}
+{% block script %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script>
+var simplemde = new SimpleMDE({
+	autosave: {
+		enabled: true,
+		uniqueId: "blogpost",
+		delay: 3000
+	},
+	hideIcons: ["fullscreen"],
+	placeholder: "Start writing your post, digi0ps...",
+});
+</script>
+{% endblock script %}

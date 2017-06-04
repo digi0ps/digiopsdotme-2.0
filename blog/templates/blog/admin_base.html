@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="{% block desc %}Sriram's personal website for blog, code and photographs.{% endblock desc %}}"/>
+		<meta name="keywords" content="digiops digi0ps Sriram Ravichandran Blog Photos Code India"/>
+		<meta name="author" content="Sriram digi0ps" />
+	<meta name="copyright" content="Sriram digi0ps" />
+		<meta name="theme-color" content="#4CAF50">
+		<title>
+			{% block title %}
+			digi0ps
+			{% endblock title %}
+		</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- STATIC FILES-->
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'home/base.css' %}">
+		<link rel="stylesheet" href="{% static 'home/index.css' %}">
+	</head>
+	<body>
+	<div id="wrap">
+<!-- Navigation bar -->
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><span id="fontGrandHotel">digi0ps</span></a>
+			</div>
+	
+			<div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
+				<ul class="nav navbar-nav">
+					<li><a class="whitenav" href="{% url 'blog_su_logout' %}">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+{% block body %}
+{% endblock body %}
+</div>
+<!-- Footer -->
+	<footer class="footer">
+			<div class="navbar navbar-inverse navbar-fixed-bottom foonav">
+				<div class="container-fluid">
+				<div class="navbar-brand">
+					<a href="https://www.facebook.com/digi0ps" class="social-links"><i class="fa fa-facebook-square social-icons" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com/digiops" class="social-links"><i class="fa fa-instagram social-icons" aria-hidden="true"></i></a>
+					<a href="https://www.twitter.com/digi0ps" class="social-links"><i class="fa fa-twitter-square social-icons" aria-hidden="true"></i></a>
+					<a href="https://www.github.com/digi0ps" class="social-links hidden-xs"><i class="fa fa-github social-icons" aria-hidden="true"></i></a>
+				</div>	
+				<div class="navbar-text pull-right">
+					Made with <span id="heart"> ❤ </span>in India
+				</div>
+				</div>
+			</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		//Heart pulsating effect 
+		$(function(){
+		setInterval(function(){
+			$("#heart").fadeOut(1000).fadeIn(1000);
+		}, 2000);
+		});
+		// Setting the color of the header and the chrome nav bar
+		var color = "{% block navcolor %}red{% endblock navcolor %}"
+		$("meta")[7].attributes["content"].value=color;
+		$(".navbar-static-top")[0].style.backgroundColor=color;
+	</script>
+{% block script %}
+{% endblock script %}
+	</body>
+</html>

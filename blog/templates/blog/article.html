@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load bleach_tags %}
+{% block title %}
+	{{ article.title }} - digi0ps
+{% endblock title %}
+{% block navcolor %}#4CAF50{% endblock navcolor %}
+{% block desc %} {{article.content|truncatechars:300}} {% endblock desc %}
+{% block body %}
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
+	.wrapper {
+		margin-bottom: 50px;
+	}
+	.article {
+		background: #f7faff;
+		padding: 5px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		border-radius: 3px;
+		box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19), 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+	}
+	.article h3{
+		color: #4CAF50;
+		font-family: 'Montserrat', sans-serif;
+		margin-bottom: 5px;
+	}
+	.content p{
+		font-family: 'Lato', sans-serif;
+		font-size: 16px;
+	}
+	.article div{
+		color: #37474F;
+		margin-top: 5px;
+	}
+	.smalls {
+		color: #9E9E9E;
+		font-size: 13px;
+	}
+	.article a{
+		font-size: 16px;
+		color: #8BC34A;
+		text-decoration: none;
+	}
+	.article a:hover{
+		color: #558B2F;
+	}
+	@media (min-width: 400px){
+		.content p{
+			font-size: 20px;
+		}
+		.article a{
+			font-size: 20px;
+		}
+	}
+
+	</style>
+	<div class="container wrapper">
+		<div class="row">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 container-fluid">
+			<div class="row article">
+
+				<div class="col-xs-12 text-center">
+	 			<h3 class="title">{{ article.title }}</h3>
+	 			</div>
+
+	 			<div class="col-xs-8 text-left">
+	 			<p class="smalls">Posted {{article.posted_time|timesince}} ago</p>
+				</div>
+				<div class="col-xs-4 text-right">
+	 			<p class="smalls">Views: {{ article.views }}</p>
+	 			</div>
+
+	 			<div class="lead content col-xs-12">
+	 			{{ article.content|bleach }}
+	 			</div>
+	 		</div>
+	 		</div>
+			</div>
+		</div>
+{% endblock body %}

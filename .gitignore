@@ -1,0 +1,18 @@
+*.pyc
+*~
+__pycache__
+myvenv
+db.sqlite3
+.DS_Store
+*.db
+*.sqlite3
+secret_settings.py
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+
+# NPM modules
+node_modules/*
