@@ -32,6 +32,22 @@ a:hover {
 	text-decoration: underline;
 }
 
+.home-link {
+	font-family: "Abel", sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	transition: all 1s ease-in;
+}
+
+.home-link:hover {
+	color: white;
+	text-decoration: overline;
+}
+
 .center {
 	text-align: center;
 }
