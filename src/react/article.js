@@ -1,6 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 import {Link} from 'react-router-dom';
+import TimeAgo from 'react-timeago';
 import '../css/article.css';
 
 
@@ -47,11 +48,13 @@ class Article extends React.Component {
 			const article = this.state.article;
 			const html = {__html: article.content}
 			const d = new Date(article.posted_time);
-			console.log(d);
+
 			body = (
 				<div>
 				<h1 className="article-header center">{article.title}</h1>
-				<small className="time">{article.posted_time}</small>
+				<small className="time">
+				<TimeAgo date={d}></TimeAgo>
+				</small>
 				<small className="views">{article.views} Views</small>
 				<div className="article-body"
 				dangerouslySetInnerHTML={html}>
