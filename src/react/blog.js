@@ -43,13 +43,14 @@ import Axios from 'axios';
 
  		const all = this.state.articles;
  		const all_art = all.map((article) => {
- 			const html = {__html: article.content.substr(0,49)}
+ 			const html = {__html: article.content.substr(0,49)};
+ 			const url = "/blog/" + article.id;
  			return (
  				<div className="article-box"
  					key={article.id}
  					style={articleBoxStyle}
  					>
- 				<h3>{article.title}</h3>
+ 				<Link to={url}><h3>{article.title}</h3></Link>
  				<p className="article-body" dangerouslySetInnerHTML={html}></p>
  				</div>
  			);
