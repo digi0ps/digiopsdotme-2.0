@@ -1,0 +1,33 @@
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Ubuntu');
+
+* {
+	box-sizing: border-width;
+}
+
+
+body {
+	background-color: #2B4496;
+	color: white;
+	font-family: system;
+	font-size: 15px;
+	-webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: black;
+}
+
+
