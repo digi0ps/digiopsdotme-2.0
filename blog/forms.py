@@ -1,8 +1,8 @@
 from django.forms import ModelForm
-from blog.models import article
+from blog.models import Article
 
 
 class ArticleForm(ModelForm):
 	class Meta:
-		model = article
+		model = Article
 		fields = ['title', 'content']
