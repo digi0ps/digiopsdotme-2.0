@@ -1,7 +1,45 @@
 .article {
 	background-color: #fff;
 	color: #2f2f2f;
+	padding: 40px;
+}
+
+.article-header {
+	font-family: "Ubuntu", sans-serif;
+	color: #2f2f2f;
+	margin-top: 0;
+	padding-top: 20px;
+}
+
+.views {
+	float: right;
+}
+
+.article-body {
 	padding: 30px;
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	line-height: 32px;
+}
+
+/* In article rules */
+.article-body img {
+	margin: 10px auto;
+	max-width: 300px;
+	max-height: 300px;
+}
+.article-body ul {
+	margin-bottom: 0;
+}
+
+.article-body a {
+	color: red;
+	text-decoration: none;
+}
+
+.article-body a:hover {
+	color: darkred;
+	text-decoration: none;
 }
 
 .close {
@@ -20,4 +58,8 @@
 .close > a:hover {
 	color: black;
 	text-decoration: none;
+}
+
+body {
+	background-color: #fff
 }

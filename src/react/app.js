@@ -10,6 +10,7 @@ import '../css/app.css';
 
 class App extends React.Component {
 	render() {
+		console.log(window.outerWidth, window.outerHeight)
 		return (
 			<Router>
 			<div className="app-container">

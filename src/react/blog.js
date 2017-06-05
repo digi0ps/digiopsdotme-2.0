@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Axios from 'axios';
-
+import '../css/blog.css';
 
  class Blog extends React.Component {
  	constructor(props){
@@ -34,24 +34,16 @@ import Axios from 'axios';
  		if (!this.state.loaded)
  			return "Loading...";
 
- 		const articleBoxStyle = {
- 			backgroundColor: "white",
- 			width: "80%",
- 			margin: "10px auto",
- 			color: "black"
- 		}
-
  		const all = this.state.articles;
  		const all_art = all.map((article) => {
- 			const html = {__html: article.content.substr(0,49)};
+ 			const html = {__html: article.content.substr(0,200)};
  			const url = "/blog/" + article.id;
  			return (
- 				<div className="article-box"
- 					key={article.id}
- 					style={articleBoxStyle}
- 					>
- 				<Link to={url}><h3>{article.title}</h3></Link>
- 				<p className="article-body" dangerouslySetInnerHTML={html}></p>
+ 				<div className="article-box" key={article.id}>
+ 				<Link to={url}>
+ 				<h3>{article.title}</h3>
+ 				<p className="article-box-body" dangerouslySetInnerHTML={html}></p>
+ 				</Link>
  				</div>
  			);
  		});
@@ -60,19 +52,16 @@ import Axios from 'axios';
  	}
 
  	render() {
- 			console.log(this.renderArticles());
  		return (
  			<div className="blog-con">
  				<Link to="/" className="home-link">digi0ps</Link>
  				<div className="blog center">
  				<div className="blog-header">
- 				<h2> Mera Blog </h2>
- 				<p> A few of musings and scriblings.</p>
+ 				<h2> Blog </h2>
+ 				<p> A few of my musings and scriblings.</p>
  				</div>
  				<div className="articles">
- 				{
- 					this.state.loaded?this.renderArticles():"Loading..."
- 				}
+ 				{ this.renderArticles() }
  				</div>
  				</div>
  			</div>

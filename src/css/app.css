@@ -5,14 +5,21 @@
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
-@import url('https://fonts.googleapis.com/css?family=Abel|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Abel|Ubuntu|Roboto|Lato|Open+Sans');
 
 * {
 	box-sizing: border-width;
 }
 
 
+html{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 body {
+	margin: 0;
 	background-color: #2B4496;
 	color: white;
 	font-family: system;

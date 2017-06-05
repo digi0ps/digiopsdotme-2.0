@@ -40,15 +40,19 @@ class Article extends React.Component {
 	}
 
 	render() {
-		let body = "Loading..."
+		const height = window.outerHeight,
+			width = window.outerWidth;
+		let body = "Loading...";
 		if (this.state.loaded){
 			const article = this.state.article;
 			const html = {__html: article.content}
+			const d = new Date(article.posted_time);
+			console.log(d);
 			body = (
 				<div>
-				<h3>{article.title}</h3>
-				<small>{article.posted_time}</small>
-				<small>{article.views}</small>
+				<h1 className="article-header center">{article.title}</h1>
+				<small className="time">{article.posted_time}</small>
+				<small className="views">{article.views} Views</small>
 				<div className="article-body"
 				dangerouslySetInnerHTML={html}>
 				</div>
@@ -56,7 +60,8 @@ class Article extends React.Component {
 			);
 		}
 		return(
-			<div className="article">
+			<div className="article"
+			height="auto" width={width}>
 			<Close />
 			{body}
 			</div>

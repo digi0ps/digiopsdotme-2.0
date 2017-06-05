@@ -9,7 +9,7 @@ class Article(models.Model):
 	posted_time = models.DateTimeField(default=timezone.now, blank=True)
 
 	class meta:
-		ordering = ['posted_date']
+		ordering = ['-posted_date']
 
 	def __str__(self):
 		return self.title
