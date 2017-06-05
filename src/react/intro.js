@@ -22,7 +22,7 @@ class Intro extends React.Component {
 				<div className="links">
 					<Link to="/blog">Blog</Link>
 					<a href="https://github.com/digi0ps">Github</a>
-					<Link to="/portfolio">Portfolio</Link>
+					<Link to="/about">About</Link>
 				</div>
 				<Footer />
 			</div>

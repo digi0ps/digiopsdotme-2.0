@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
+
+.home-link {
+	font-family: "Abel", sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	transition: all 1s ease-in;
+}
+
+.home-link:hover {
+	color: white;
+	text-decoration: overline;
+}
+
+.portfolio {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.portfolio a {
+	color: #dfff00;
+}
+
+.portfolio a:hover {
+	color: #dfff00;
+	text-decoration-color: #dfff00;
+}
+
+.header {
+	font-size: 30px;
+	font-weight: bold;
+	font-family: "Roboto", sans-serif;
+}
+
+.toolazy {
+	width: 50%;
+	margin: 10px auto;
+	height: 40px;
+	line-height: 40px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+.body {
+	width: 70%;
+	margin: 10px auto;
+	font-family: "Lato", sans-serif;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.para {
+	text-align: left;
+}
+
+.top {
+	margin-right: 10px;
+}
+
+.top > a:hover {
+	text-decoration: none;
+}
