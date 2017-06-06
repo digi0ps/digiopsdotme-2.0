@@ -1,12 +1,15 @@
 
-.blog-header > h2 {
+.blog.header > h2 {
+	font-family: "Open Sans", sans-serif;
 	margin-top: 30px;
 	font-size: 30px;
 }
 
-.blog-header > p {
+.blog.header > p {
+	font-family: "Open Sans", sans-serif;
 	font-size: 25px;
 	margin-top: 0;
+	opacity: 0.8;
 }
 
 .articles {
@@ -14,10 +17,11 @@
 	flex-direction: column;
 }
 
+
 .article-box {
 	background-color: #fff;
 	width: 60%;
-	height: 130px;
+	height: 125px;
 	overflow: hidden;
 	margin: 10px auto;
 	color: #2f2f2f;
@@ -38,6 +42,7 @@
 	font-size: 15px;
 	color: #2f2f2f;
 	opacity: 0.9;
+	margin: 0;
 }
 
 .article-box a {
@@ -53,6 +58,41 @@
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
-.blog-time {
+
+.blog-time {	
+	margin-top: 10px;
 	float: right;
 }
+
+@media only screen and (max-width: 800px) {
+	.article-box {
+		width: 80%;
+		height: auto;
+		padding-bottom: 10px;
+	}
+
+	.blog-time {
+		margin-top: 11px;
+	}
+
+	.blog.header > p {
+		font-size: 23px;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.article-box {
+		width: 90%;
+		height: auto;
+		padding-bottom: 10px;
+	}
+
+	.blog.header > p {
+		font-size: 20px;
+	}
+
+	.details {
+		width: 95%;
+	}
+}
+

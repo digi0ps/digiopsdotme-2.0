@@ -1,7 +1,9 @@
+
 .article {
 	background-color: #fff;
 	color: #2f2f2f;
-	padding: 40px;
+	padding: 20px;
+	padding-top: 40px;
 }
 
 .article-header {
@@ -11,12 +13,19 @@
 	padding-top: 20px;
 }
 
+.article-details {
+	width: 93%;
+	margin: 0px auto;
+	margin-top: 30px;
+}
+
 .views {
 	float: right;
 }
 
 .article-body {
-	padding: 30px;
+	padding: 10px;
+	padding-top: 10px;
 	font-family: "Roboto", sans-serif;
 	font-size: 20px;
 	line-height: 32px;
@@ -60,6 +69,23 @@
 	text-decoration: none;
 }
 
-body {
-	background-color: #fff
+@media only screen and (min-width: 450px){
+	.article {
+		padding: 30px;
+		padding-top: 40px;
+	}
+
+	.article-body {
+		padding: 20px;
+	}
+}
+
+@media only screen and (min-width: 800px){
+	.article {
+		padding: 40px;
+	}
+
+	.article-body {
+		padding: 30px;
+	}
 }
