@@ -41,8 +41,7 @@ class Article extends React.Component {
 	}
 
 	render() {
-		const height = window.outerHeight,
-			width = window.outerWidth;
+		const width = window.outerWidth;
 		let body = "Loading...";
 		if (this.state.loaded){
 			const article = this.state.article;
@@ -57,8 +56,7 @@ class Article extends React.Component {
 				</small>
 				<small className="views">{article.views} Views</small>
 				<div className="article-body"
-				dangerouslySetInnerHTML={html}>
-				</div>
+				dangerouslySetInnerHTML={html} />
 				</div>
 			);
 		}
