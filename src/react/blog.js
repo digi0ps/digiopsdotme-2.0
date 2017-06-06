@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Axios from 'axios';
+import TimeAgo from 'react-timeago';
 import '../css/blog.css';
 
  class Blog extends React.Component {
@@ -36,13 +37,19 @@ import '../css/blog.css';
 
  		const all = this.state.articles;
  		const all_art = all.map((article) => {
- 			const html = {__html: article.content.substr(0,200)};
+ 			const html = {__html: article.short};
  			const url = "/blog/" + article.id;
+ 			const d = new Date(article.posted_time);
  			return (
  				<div className="article-box" key={article.id}>
  				<Link to={url}>
  				<h3>{article.title}</h3>
  				<p className="article-box-body" dangerouslySetInnerHTML={html}></p>
+ 				<div className="details">
+ 				<small className="blog-time">
+ 				<TimeAgo date={d}></TimeAgo>
+ 				</small>
+ 				</div>
  				</Link>
  				</div>
  			);
@@ -56,7 +63,7 @@ import '../css/blog.css';
  			<div className="blog-con">
  				<Link to="/" className="home-link">digi0ps</Link>
  				<div className="blog center">
- 				<div className="blog-header">
+ 				<div className="blog header">
  				<h2> Blog </h2>
  				<p> A few of my musings and scriblings.</p>
  				</div>

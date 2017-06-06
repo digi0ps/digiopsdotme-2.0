@@ -51,10 +51,12 @@ class Article extends React.Component {
 			body = (
 				<div>
 				<h1 className="article-header center">{article.title}</h1>
+				<div className="article-details">
 				<small className="time">
 				<TimeAgo date={d}></TimeAgo>
 				</small>
 				<small className="views">{article.views} Views</small>
+				</div>
 				<div className="article-body"
 				dangerouslySetInnerHTML={html} />
 				</div>

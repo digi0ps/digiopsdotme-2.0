@@ -16,8 +16,8 @@
 
 .article-box {
 	background-color: #fff;
-	width: 80%;
-	height: 150px;
+	width: 60%;
+	height: 130px;
 	overflow: hidden;
 	margin: 10px auto;
 	color: #2f2f2f;
@@ -26,10 +26,33 @@
 	border-radius: 5px;
 }
 
+.article-box > h3 {
+	font-family: "Ubuntu", sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	color: #2f2f2f;
+}
+
+.article-box-body {
+	font-family: "Roboto", sans-serif;
+	font-size: 15px;
+	color: #2f2f2f;
+	opacity: 0.9;
+}
+
 .article-box a {
 	color: #2f2f2f;
 }
+
 .article-box a:hover {
 	color: #2f2f2f;
 	text-decoration: none;
+}
+
+.details {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.blog-time {
+	float: right;
 }
