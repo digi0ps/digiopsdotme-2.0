@@ -1,0 +1,6 @@
+{
+  "main.css": "css/prod.css",
+  "main.css.map": "css/prod.css.map",
+  "main.js": "js/prod.js",
+  "main.js.map": "js/prod.js.map"
+}
