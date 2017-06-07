@@ -4,7 +4,7 @@ from django.utils import timezone
 
 class Article(models.Model):
 	title = models.CharField(max_length=140)
-	content = models.CharField(max_length=5000)
+	content = models.TextField(max_length=50000)
 	views = models.IntegerField(default=1, blank=True)
 	short = models.CharField(max_length=200, default='')
 	posted_time = models.DateTimeField(default=timezone.now, blank=True)
