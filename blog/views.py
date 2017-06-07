@@ -50,6 +50,7 @@ class article_api(APIView):
 			article = Article.objects.get(pk=pk)
 		except:
 			return Http404
+		article.increment()
 		article.content = markdown2.markdown(article.content, extras=["tables", "cuddled-lists"])
 		serializer = ArticleSerial(article)
 		return Response(serializer.data)

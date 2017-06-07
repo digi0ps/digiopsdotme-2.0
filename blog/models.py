@@ -15,6 +15,10 @@ class Article(models.Model):
 	def __str__(self):
 		return self.title
 
+	def increment(self):
+		self.views += 1
+		self.save()
+
 	def get_date(self):
 		t = timezone.localtime(self.posted_time)
 		return "{}-{}-{} {}:{}".format(t.day, t.month, t.year, t.hour, t.minute)
