@@ -10,7 +10,7 @@
 	font-family: "Ubuntu", sans-serif;
 	color: #2f2f2f;
 	margin-top: 0;
-	padding-top: 20px;
+	padding-top: 25px;
 }
 
 .article-details {
@@ -53,20 +53,18 @@
 
 .close {
 	position: absolute;
-	top: 10px;
+	top: 15px;
 	right: 20px;
 }
 
 .close > a {
 	font-size: 30px;
-	opacity: 0.7;
-	color: black;
+	color: #2f2f2f;
 	font-weight: bold;
 }
 
 .close > a:hover {
 	color: black;
-	text-decoration: none;
 }
 
 @media only screen and (min-width: 450px){

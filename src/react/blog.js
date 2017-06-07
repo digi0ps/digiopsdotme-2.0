@@ -20,7 +20,7 @@ import '../css/blog.css';
  	}
 
  	fetchArticles() {
- 		const endpoint = "/blog/api/articles/";
+ 		const endpoint = "http://digiops.me/blog/api/articles/";
  		Axios.get(endpoint)
  			.then((response) => {
  				const all_articles = response.data;

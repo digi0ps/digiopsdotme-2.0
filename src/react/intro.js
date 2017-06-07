@@ -6,7 +6,7 @@ import '../css/intro.css';
 const Footer = () => {
 	return (
 		<div className="footer">
-		by <a href="https://github.com/digi0ps">digi0ps</a>
+		<a href="https://github.com/digi0ps/digiopsdotme-2.0" target="blank">view source</a>
 		</div>
 	);
 }
@@ -36,7 +36,7 @@ const Viewers = () => {
 
 	return (
 		<div className="viewers">
-		{viewers}{sub} viewer
+		{viewers}{sub} visitor
 		</div>
 	);
 }
@@ -45,14 +45,18 @@ const Viewers = () => {
 class Intro extends React.Component {
 
 	render() {
+		//Dynamically set the height of the container
+		const style = {
+			height: window.outerHeight
+		}
 		return (
-			<div className="intro-con">
+			<div className="intro-con" style={style}>
 				<Helmet>
 				<meta name="description" content="Sriram's online hideout."/>
 				</Helmet>
 				<div className="logo"></div>
 				<div className="title">digi0ps</div>
-				<div className="moto">Just a <code>random</code> guy who can code.</div>
+				<div className="moto">Just a <code>random</code> guy who codes.</div>
 				<div className="links">
 					<Link to="/blog">Blog</Link>
 					<a href="https://github.com/digi0ps">Github</a>
