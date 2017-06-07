@@ -81,7 +81,7 @@ class Article extends React.Component {
 		// Bug: While loading an article, .article doesn't fill the page.
 		// Fix: If state isn't loaded, set .article height to page's height. If it gets loaded set it to auto.
 		const style = {
-			height: this.state.loaded?"auto":window.outerHeight
+			height: this.state.loaded?"auto":window.innerHeight
 		}
 		
 		return(

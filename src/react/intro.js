@@ -47,7 +47,7 @@ class Intro extends React.Component {
 	render() {
 		//Dynamically set the height of the container
 		const style = {
-			height: window.outerHeight
+			height: window.innerHeight
 		}
 		return (
 			<div className="intro-con" style={style}>
