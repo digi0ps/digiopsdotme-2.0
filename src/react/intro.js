@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import {Link} from 'react-router-dom';
 import '../css/intro.css';
 
@@ -46,6 +47,9 @@ class Intro extends React.Component {
 	render() {
 		return (
 			<div className="intro-con">
+				<Helmet>
+				<meta name="description" content="Sriram's online hideout."/>
+				</Helmet>
 				<div className="logo"></div>
 				<div className="title">digi0ps</div>
 				<div className="moto">Just a <code>random</code> guy who can code.</div>

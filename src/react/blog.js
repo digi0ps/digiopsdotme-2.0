@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Axios from 'axios';
 import TimeAgo from 'react-timeago';
+import Helmet from 'react-helmet';
 import '../css/blog.css';
 
  class Blog extends React.Component {
@@ -61,11 +62,15 @@ import '../css/blog.css';
  	render() {
  		return (
  			<div className="blog-con">
+ 				<Helmet>
+ 				<title>Blog</title>
+ 				<meta name="description" content="A tiny exhibition of my musings and ramblings." />
+ 				</Helmet>
  				<Link to="/" className="home-link">digi0ps</Link>
  				<div className="blog center">
  				<div className="blog header">
  				<h2> Blog </h2>
- 				<p> A few of my musings and scriblings.</p>
+ 				<p> A few of my musings and ramblings.</p>
  				</div>
  				<div className="articles">
  				{ this.renderArticles() }

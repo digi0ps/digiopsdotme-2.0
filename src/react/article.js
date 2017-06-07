@@ -1,5 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
+import Helmet from 'react-helmet';
 import {Link, Redirect} from 'react-router-dom';
 import TimeAgo from 'react-timeago';
 import '../css/article.css';
@@ -31,7 +32,7 @@ class Article extends React.Component {
 
 	fetchArticle(id){
 		console.log(id);
-		const endpoint = "/blog/api/article/" + id;
+		const endpoint = "http://digiops.ap-south-1.elasticbeanstalk.com/blog/api/article/" + id;
 		console.log(endpoint);
 		Axios.get(endpoint)
 			.then((response) => {
@@ -57,6 +58,11 @@ class Article extends React.Component {
 			const d = new Date(article.posted_time);
 			body = (
 				<div>
+				<Helmet>
+				<title>{article.title} - digi0ps</title>
+				<meta name="description" content={article.short} />
+				<meta name="theme-color" content="#ffffff" />
+				</Helmet>
 				<h1 className="article-header center">{article.title}</h1>
 				<div className="article-details">
 				<small className="time">
