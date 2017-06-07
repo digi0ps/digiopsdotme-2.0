@@ -19,7 +19,7 @@ import '../css/blog.css';
  	}
 
  	fetchArticles() {
- 		const endpoint = "http://127.0.0.1:8000/blog/api/articles/";
+ 		const endpoint = "/blog/api/articles/";
  		Axios.get(endpoint)
  			.then((response) => {
  				const all_articles = response.data;

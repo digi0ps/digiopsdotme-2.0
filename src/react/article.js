@@ -1,6 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import TimeAgo from 'react-timeago';
 import '../css/article.css';
 
@@ -19,7 +19,8 @@ class Article extends React.Component {
 		super(props);
 		this.state = {
 			loaded: false,
-			article: null
+			article: null,
+			error: false
 		}
 	}
 
@@ -29,13 +30,20 @@ class Article extends React.Component {
 	}
 
 	fetchArticle(id){
-		const endpoint = "http://127.0.0.1:8000/blog/api/article/" + id;
+		console.log(id);
+		const endpoint = "/blog/api/article/" + id;
+		console.log(endpoint);
 		Axios.get(endpoint)
 			.then((response) => {
 				const arty = response.data;
 				this.setState({
 					loaded: true,
 					article: arty
+				})
+			})
+			.catch((err) => {
+				this.setState({
+					error: err
 				})
 			});
 	}
@@ -47,7 +55,6 @@ class Article extends React.Component {
 			const article = this.state.article;
 			const html = {__html: article.content}
 			const d = new Date(article.posted_time);
-
 			body = (
 				<div>
 				<h1 className="article-header center">{article.title}</h1>
@@ -62,6 +69,10 @@ class Article extends React.Component {
 				</div>
 			);
 		}
+		else if (this.state.error){
+			body = <Redirect to="/article-not-found" push={false}/>
+		}
+
 		return(
 			<div className="article"
 			height="auto" width={width}>
