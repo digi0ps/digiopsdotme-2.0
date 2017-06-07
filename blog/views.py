@@ -60,7 +60,10 @@ class article_api(APIView):
 
 def super_user_view(request):
 	if request.user.is_authenticated:
-		return render(request, "blog/superuser.html")
+		articles = Article.objects.all()
+		return render(request, "blog/superuser.html", {
+			"articles": articles
+		})
 	else:
 		if request.POST and request.method == "POST":
 			uname = request.POST["username"]
@@ -75,16 +78,49 @@ def super_user_view(request):
 			return render(request, "blog/superuser_login.html")
 
 
+def super_user_create(request):
+	if request.user.is_authenticated:
+		return render(request, "blog/superuser_create.html")
+	else:
+		return HttpResponseRedirect("/blog/superuser")
+
+
+def super_user_edit(request, pk):
+	if request.user.is_authenticated:
+		article = get_object_or_404(Article, pk=pk)
+		return render(request, "blog/superuser_create.html", {
+			"article": article,
+		})
+
+
 def super_user_logout(request):
 	logout(request)
 	return HttpResponseRedirect("/blog/superuser")
 
 
+def post_edited_article(request, pk):
+	if request.POST and request.method == "POST" and request.user.is_authenticated:
+		f = ArticleForm(request.POST)
+		a = get_object_or_404(Article, pk=pk)
+		print("inside")
+		if f.is_valid():
+			f.save(commit=False)
+			cd = f.cleaned_data
+			a.title = cd["title"]
+			a.short = cd["short"]
+			a.content = cd["content"]
+			a.save()
+			return HttpResponseRedirect("/blog/superuser")
+		else:
+			print("not valid")
+	else:
+		print("not logged")
+
+
 def post_article(request):
-	if request.POST and request.method == "POST":
+	if request.POST and request.method == "POST" and request.user.is_authenticated:
 		f = ArticleForm(request.POST)
 		new_article = f.save()
-		print(new_article.id)
-		return HttpResponseRedirect("/blog/article/" + str(new_article.id))
+		return HttpResponseRedirect("/blog/superuser")
 	else:
 		return HttpResponseRedirect("/blog/superuser")

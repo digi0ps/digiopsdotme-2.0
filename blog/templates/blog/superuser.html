@@ -1,57 +1,95 @@
 {% extends "blog/admin_base.html" %}
 {% block title %}
-	digi-admin
+	Blog
 {% endblock title %}
+{% block desc %}
+	Sriram's blog. :)
+{% endblock desc %}
 {% block navcolor %}#2f2f2f{% endblock navcolor %}
 {% block body %}
 <style>
-h3{
-	margin-top: 0;
-}
-.wrapper {
-	margin-bottom: 100px;
-}
-
+	@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
+	body {
+		background-color: #efefef;
+	}
+	.article {
+		background: #f7faff;
+		padding: 5px;
+		margin-bottom: 30px;
+		border-radius: 5px;
+		box-shadow:5px 5px 10px #aaa;
+	}
+	.article:nth-child(1) {
+		margin-top: 10px;
+	}
+	.article:nth-last-child(1) {
+		margin-bottom: 100px;
+	}
+	.article h3{
+		color: #4CAF50;
+		font-family: 'Montserrat', sans-serif;
+		margin-bottom: 5px;
+	}
+	.content p{
+		font-family: 'Lato', sans-serif;
+		font-size: 12px;
+	}
+	.smalls {
+		color: #9E9E9E;
+		font-size: 13px;
+	}
+	.article div{
+		color: #37474F;
+		margin-top: 5px;
+	}
+	.content a{
+		font-size: 16px;
+		color: #8BC34A;
+		text-decoration: none;
+	}
+	.content a:hover{
+		color: #558B2F;
+	}
+	@media (min-width: 400px){
+		.content p{
+			font-size: 20px;
+		}
+		.content a{
+			font-size: 20px;
+		}
+	}
+	
 </style>
-	<div class="container wrapper">
+{% load bleach_tags %}
+<div class="container">
 	<div class="row">
-	<br><br>
-	<div class="col-xs-12 text-center">
-	<h3 class="lead">Create Post</h3>
+	{% for article in articles %}
+		<div class="article col-xs-12 col-sm-10 col-sm-offset-1" id="art{{ article.id }}">
+			<div class="container-fluid">
+			<div class="row">
+
+				<div class="col-xs-12 text-center">
+	 			<h3 class="title">{{ article.title }}</h3>
+	 			</div>
+
+	 			<div class="col-xs-8 text-left">
+	 			<p class="smalls">Posted {{article.posted_time|timesince}} ago</p>
+				</div>
+				<div class="col-xs-4 text-right">
+	 			<p class="smalls">Views: {{ article.views }}</p>
+	 			</div>
+
+	 			<div class="lead content col-xs-12">
+	 			{{ article.content|bleach|truncatechars:300 }}
+	 			<br>
+	 			<a href="{% url 'blog_su_edit' article.id %}" class="article-link">Edit article</a>
+	 			</div>
+	 		</div>
+	 		</div>
+		</div> 
+	{% endfor %}
 	</div>
-	<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-	<form method="POST" action="{% url 'blog_post' %}">
-		{% csrf_token %}
-		<div class="form-group text-center">
-			<input type="text" class="form-control" id="title" name="title" placeholder="Enter the title of your article.">
-		</div>
-		<br>
-		<div class="form-group text-center">
-			<input type="text" class="form-control" id="short" name="short" placeholder="A short description of your blog (max 80 chars)." max-length="200">
-		</div>
-		<br>
-		<textarea id="content" name="content"></textarea>
-		<br>
-		<div class="col-xs-2 col-xs-offset-5">
-		<button type="submit" class="btn btn-large btn-success">POST</button>
-		</div>
-	</form>
-	</div>
-	</div>
-	</div>
+</div>
 {% endblock body %}
-{% block script %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
-<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
-<script>
-var simplemde = new SimpleMDE({
-	autosave: {
-		enabled: true,
-		uniqueId: "blogpost",
-		delay: 3000
-	},
-	hideIcons: ["fullscreen"],
-	placeholder: "Start writing your post, digi0ps...",
-});
-</script>
-{% endblock script %}
+
+
