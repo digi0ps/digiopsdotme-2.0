@@ -83,6 +83,7 @@ WSGI_APPLICATION = 'root.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 if 'AWS' in os.environ:
+    """
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -93,6 +94,7 @@ if 'AWS' in os.environ:
             'PORT': os.environ['RDS_PORT'],
         }
     }
+    """
     SECRET_KEY = os.environ['SECRET_KEY']
     STATIC_ROOT = os.path.join(BASE_DIR, "..", "www", "static")
 else:
