@@ -48,6 +48,12 @@
 	right: 10px;;
 }
 
+.viewers {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;;
+}
+
 * {
 	padding-top: 0;
 }

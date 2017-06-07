@@ -18,3 +18,15 @@ class Article(models.Model):
 	def get_date(self):
 		t = timezone.localtime(self.posted_time)
 		return "{}-{}-{} {}:{}".format(t.day, t.month, t.year, t.hour, t.minute)
+
+
+class Analytics(models.Model):
+	viewers = models.IntegerField(default=0)
+	comment = models.CharField(max_length=30, blank=True)
+
+	def __str__(self):
+		return self.comment
+
+	def increment(self):
+		self.viewers += 1
+		self.save()

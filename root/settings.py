@@ -146,6 +146,7 @@ TIME_ZONE = 'Asia/Kolkata'
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'build'),)
 
 # Django Bleach settings
 # Which HTML tags are allowed

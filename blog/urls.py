@@ -3,8 +3,6 @@ from django.contrib import admin
 from blog import views
 
 urlpatterns = [
-    url(r'^$', views.blog_index_view, name="blog"),
-    # url(r'article/(\d{1,3})$', views.blog_post_view, name="article"),
     # API urls
     url(r'api/articles/$', views.all_articles_api.as_view()),
     url(r'api/article/(\d{1,3})$', views.article_api.as_view()),
