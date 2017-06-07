@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "dev": "react-scripts start",
-    "build": "react-scripts build; python manage.py collectstatic"
+    "build": "mkdir public; react-scripts build; python manage.py collectstatic; rm -rf public"
   },
   "repository": {
     "type": "git",

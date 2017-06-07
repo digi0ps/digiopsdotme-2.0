@@ -31,9 +31,7 @@ class Article extends React.Component {
 	}
 
 	fetchArticle(id){
-		console.log(id);
-		const endpoint = "http://digiops.ap-south-1.elasticbeanstalk.com/blog/api/article/" + id;
-		console.log(endpoint);
+		const endpoint = "http://digiops.me/blog/api/article/" + id;
 		Axios.get(endpoint)
 			.then((response) => {
 				const arty = response.data;
@@ -50,8 +48,8 @@ class Article extends React.Component {
 	}
 
 	render() {
-		const width = window.outerWidth;
-		let body = "Loading...";
+		let body = (<center><br />Loading...</center>);
+		
 		if (this.state.loaded){
 			const article = this.state.article;
 			const html = {__html: article.content}
@@ -76,18 +74,23 @@ class Article extends React.Component {
 			);
 		}
 		else if (this.state.error){
+			// If the article isn't found, redirect to 404 page
 			body = <Redirect to="/article-not-found" push={false}/>
 		}
 
+		// Bug: While loading an article, .article doesn't fill the page.
+		// Fix: If state isn't loaded, set .article height to page's height. If it gets loaded set it to auto.
+		const style = {
+			height: this.state.loaded?"auto":window.outerHeight
+		}
+		
 		return(
-			<div className="article"
-			height="auto" width={width}>
+			<div className="article" style={style}>
 			<Close />
 			{body}
 			</div>
 		);
 	}
 }
-
 
 export default Article;
