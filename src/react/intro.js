@@ -1,6 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from 'react-router-dom';
+import { CSSTransitionGroup } from 'react-transition-group';
+import{Motion, spring} from 'react-motion';
 import '../css/intro.css';
 
 const Footer = () => {
@@ -35,9 +37,12 @@ const Viewers = () => {
 		sub = 'th';
 
 	return (
-		<div className="viewers">
-		{viewers}{sub} visitor
-		</div>
+		<Motion defaultStyle={{x:0}}
+			style={{
+				x:spring(parseInt(viewers,10))
+			}}>
+		{value => <div className="viewers">{Math.floor(value.x)}{sub} visitor</div>}
+		</Motion>
 	);
 }
 
@@ -54,14 +59,21 @@ class Intro extends React.Component {
 				<Helmet>
 				<meta name="description" content="Sriram's online hideout."/>
 				</Helmet>
+				<CSSTransitionGroup
+					transitionName="fade"
+					transitionAppear={true}
+					transitionAppearTimeout={500}
+					transitionEnter={false}
+					transitionLeave={false}>
 				<div className="logo"></div>
 				<div className="title">digi0ps</div>
-				<div className="moto">Just a <code>random</code> guy who codes.</div>
+				<div className="moto">Just a random guy who codes.</div>
 				<div className="links">
 					<Link to="/blog">Blog</Link>
 					<a href="https://github.com/digi0ps">Github</a>
 					<Link to="/about">About</Link>
 				</div>
+				</CSSTransitionGroup>
 				<Viewers />
 				<Footer />
 			</div>
