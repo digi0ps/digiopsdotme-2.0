@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {CSSTransitionGroup} from 'react-transition-group';
 import {Link} from 'react-router-dom';
+import HomeLink from './homelink.js';
 import '../css/about.css';
 
 
@@ -14,7 +15,7 @@ class About extends React.Component {
 		<title>About me ~ digi0ps</title>
 		<meta name="description" content="This might tell quite something about me." />
 		</Helmet>
-		<Link className="home-link" to="/">digi0ps</Link>
+		<HomeLink />
 		<div className="portfolio">
 			<CSSTransitionGroup
 					transitionName="fade"

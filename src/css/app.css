@@ -63,6 +63,26 @@ a:hover {
 	text-align: right;
 }
 
+.fade-leave {
+ 	opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+	opacity: 0;
+	height: 0;
+  	transition: opacity 250ms ease-in;
+}
+.fade-appear {
+  opacity: 0;
+  filter: brightness(0.1);
+  z-index: 1;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  filter: brightness(1);
+  transition: opacity 500ms ease-in;
+}
 .fade-enter {
   opacity: 0;
   z-index: 1;
@@ -71,4 +91,15 @@ a:hover {
 .fade-enter.fade-enter-active {
   opacity: 1;
   transition: opacity 250ms ease-in;
+}
+
+.falldown-appear {
+	opacity: 0.1;
+	transform: translate(0, -10px);
+}
+
+.falldown-appear.falldown-appear-active {
+	opacity: 1;
+	transform: translate(0, 0);
+	transition: all 250ms ease-in;
 }
