@@ -28,6 +28,7 @@ class Article extends React.Component {
 	componentDidMount(){
 		const a_id = this.props.match.params.id;
 		this.fetchArticle(a_id);
+		window.scrollTo(0,0);
 	}
 
 	fetchArticle(id){
