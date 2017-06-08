@@ -7,8 +7,7 @@ from blog.serializers import *
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import markdown2
-
-# API Views
+import re
 
 COMMENT = "DEV"
 
@@ -24,13 +23,64 @@ def get_viewers():
 	return a.viewers
 
 
-def index(request):
+# These functions returns the title based on the path
+# Helps to render the meta data server side
+
+
+def get_head_data(path):
+	# Remove final backslash
+	if path[-1] == "/":
+		path = path[:-1]
+	# Set defaults
+	color = "#2B4496"
+	title = "digi0ps"
+	desc = "Sriram's online hideout"
+	if path == '/':
+		# return default values
+		pass
+	elif path == '/blog':
+		title = "Blogy - digi0ps"
+		desc = "A few of my musings and ramblings."
+	elif path == '/about':
+		title = "About me - digi0ps"
+		desc = "About me... - digi0ps"
+	elif re.match(r'/blog/\d+', path):
+		# it's an article page
+		# get id from url
+		# if id not a integer than return default
+		try:
+			aid = int(path.split("/blog/")[1])
+		except:
+			return (color, desc, title)
+		# now we get the article
+		# if not found do the same
+		try:
+			a = Article.objects.get(id=aid)
+		except:
+			return (color, desc, title)
+		# article is found
+		color = "##FFFFFF"
+		title = a.title
+		desc = a.short
+	return (color, desc, title)
+
+
+def react(request, x=0):
+	# Main handler for react
+	# Renders html meta data based on the path
 	v = get_viewers()
-	print(v)
+	# destructure data from the get_head_data func
+	(color, desc, title) = get_head_data(request.path)
+	print(get_head_data(request.path))
 	return render(request, "main.html", {
-		"viewers": v
+		"viewers": v,
+		"title": title,
+		"desc": desc,
+		"theme": color
 	})
 
+
+# API
 
 class all_articles_api(APIView):
 
