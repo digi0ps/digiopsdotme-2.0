@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import {CSSTransitionGroup} from 'react-transition-group';
 import {Link} from 'react-router-dom';
 import '../css/about.css';
 
@@ -15,6 +16,13 @@ class About extends React.Component {
 		</Helmet>
 		<Link className="home-link" to="/">digi0ps</Link>
 		<div className="portfolio">
+			<CSSTransitionGroup
+					transitionName="fade"
+					transitionAppear={true}
+					transitionAppearTimeout={1000}
+					transitionEnter={false}
+					transitionLeaveTimeout={500}
+			>
 			<div className="header center" id="top">
 			<h1>About</h1>
 			</div>
@@ -52,6 +60,7 @@ class About extends React.Component {
 			</p>
 			<small>Last updated: June 2017</small>
 			</div>
+			</CSSTransitionGroup>
 		</div>
 		<div className="top right"><a href="#top">Back to top <span role="img" aria-label="pointing up finger">👆</span></a></div>
 		</div>
