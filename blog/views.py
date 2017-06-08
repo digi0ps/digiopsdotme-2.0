@@ -59,7 +59,7 @@ def get_head_data(path):
 		except:
 			return (color, desc, title)
 		# article is found
-		color = "##FFFFFF"
+		color = "#FFFFFF"
 		title = a.title
 		desc = a.short
 	return (color, desc, title)
