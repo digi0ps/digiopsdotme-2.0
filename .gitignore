@@ -16,6 +16,3 @@ secret_settings.py
 
 # NPM modules
 node_modules/*
-
-# Temporary
-build/*

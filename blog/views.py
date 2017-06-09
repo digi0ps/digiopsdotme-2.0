@@ -85,7 +85,8 @@ def react(request, x=0):
 class all_articles_api(APIView):
 
 	def get(self, request, format=None):
-		articles = Article.objects.all()
+		articles = Article.objects.order_by("-posted_time")
+		print(articles)
 		for x in articles:
 			x.content = markdown2.markdown(x.content, extras=["tables", "cuddled-lists"])
 		serializer = ArticleListSerial(articles, many=True)
