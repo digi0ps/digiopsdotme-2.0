@@ -69,9 +69,9 @@ class Intro extends React.Component {
 				<div className="title">digi0ps</div>
 				<div className="moto">Just a random guy who codes.</div>
 				<div className="links">
-					<Link to="/blog">Blog</Link>
-					<a href="https://github.com/digi0ps">Github</a>
-					<Link to="/about">About</Link>
+					<Link to="/blog" className="link">Blog</Link>
+					<a href="https://github.com/digi0ps" className="link">Github</a>
+					<Link to="/about" className="link">About</Link>
 				</div>
 				</CSSTransitionGroup>
 				<Viewers />

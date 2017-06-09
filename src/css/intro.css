@@ -25,21 +25,20 @@
 	margin-top: 15px;
 }
 
-.links > a {
+.link {
 	display: block;
 	font-weight: bold;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	text-decoration: underline;
 	text-transform: uppercase;
 	font-size: 19px;
-	filter: brightness(0.9);
 	tranition: all 100ms ease-in;
 }
 
-.links > a:hover {
+.link:hover {
 	color: white;
-	filter: brightness(2)
+	text-decoration: underline;
+	filter: brightness(2);
 }
 
 .footer {
