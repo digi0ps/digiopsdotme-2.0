@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import {Link} from 'react-router-dom';
 import { CSSTransitionGroup } from 'react-transition-group';
 import{Motion, spring} from 'react-motion';
+import Typing from 'react-typing-animation';
 import '../css/intro.css';
 
 const Footer = () => {
@@ -47,6 +48,23 @@ const Viewers = () => {
 }
 
 
+const TypingAnimation= () => {
+	return (
+		<Typing className="typing" cursor={false}>
+			<Typing.Delay ms={1000} />
+			codes.
+			<Typing.Delay ms={800} />
+			<Typing.Backspace count={6}/>
+			designs.
+			<Typing.Delay ms={800} />
+			<Typing.Backspace count={8}/>
+			writes.
+			<Typing.Delay ms={800} />
+			<Typing.Backspace count={7}/>
+			codes.
+		</Typing>
+	);
+}
 class Intro extends React.Component {
 
 	render() {
@@ -67,7 +85,9 @@ class Intro extends React.Component {
 					transitionLeave={false}>
 				<div className="logo"></div>
 				<div className="title">digi0ps</div>
-				<div className="moto">Just a random guy who codes.</div>
+				<div className="moto">Just a random guy who
+				<TypingAnimation />
+				</div>
 				<div className="links">
 					<Link to="/blog" className="link">Blog</Link>
 					<a href="https://github.com/digi0ps" className="link">Github</a>

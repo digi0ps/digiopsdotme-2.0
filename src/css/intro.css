@@ -20,6 +20,11 @@
 	line-height: 20px;
 }
 
+.typing {
+	display: inline;
+	margin-left: 5px;
+}
+
 .links {
 	text-align: center;
 	margin-top: 15px;
