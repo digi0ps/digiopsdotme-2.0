@@ -55,18 +55,15 @@
 	position: absolute;
 	top: 15px;
 	right: 20px;
-}
-
-.close > a {
 	font-size: 30px;
 	color: #2f2f2f;
 	font-weight: bold;
+	cursor: pointer;
 }
 
-.close > a:hover {
+.close:hover{
 	color: black;
 }
-
 @media only screen and (min-width: 450px){
 	.article {
 		padding: 30px;

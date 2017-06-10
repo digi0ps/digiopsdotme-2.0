@@ -1,19 +1,30 @@
 import React from 'react';
 import Axios from 'axios';
 import Helmet from 'react-helmet';
-import {Link, Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
+import {CSSTransitionGroup} from 'react-transition-group';
+import TweenLite from 'gsap';
 import TimeAgo from 'react-timeago';
 import '../css/article.css';
 
 
-const Close = () => {
+
+const Close = (props) => {
 	return (
-		<div className="close">
-		<Link to="/blog">X</Link>
+		<div className="close"
+			onClick={CloseClick.bind(null, props.push)}>
+		X
 		</div>
 	);
 }
 
+const CloseClick = (push) => {
+	const box = document.getElementById("article");
+	const height = window.innerHeight;
+  	const translate ="translate(0," + height + "px)";
+ 	const t = TweenLite.to(box, 0.25, {transform: translate});
+ 	t.eventCallback("onComplete", push, ["/blog"]);
+}
 
 class Article extends React.Component {
 	constructor(props){
@@ -56,7 +67,7 @@ class Article extends React.Component {
 			const html = {__html: article.content}
 			const d = new Date(article.posted_time);
 			body = (
-				<div>
+				<div key={article.id}>
 				<Helmet>
 				<title>{article.title} - digi0ps</title>
 				<meta name="description" content={article.short} />
@@ -86,9 +97,17 @@ class Article extends React.Component {
 		}
 		
 		return(
-			<div className="article" style={style}>
-			<Close />
+			<div className="article" style={style} id="article">
+			<Close push={this.props.history.push}/>
+			<CSSTransitionGroup
+					transitionName="fade"
+					transitionAppear={true}
+					transitionAppearTimeout={250}
+					transitionEnterTimeout={500}
+					transitionLeaveTimeout={500}
+			>
 			{body}
+			</CSSTransitionGroup>
 			</div>
 		);
 	}
