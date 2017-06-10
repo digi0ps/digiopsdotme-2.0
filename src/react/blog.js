@@ -7,16 +7,27 @@ import {TweenLite} from 'gsap';
 import HomeLink from './homelink.js';
 import '../css/blog.css';
 
+
 const ArticleBoxOnClick = (id, push, e) => {
+	// The article box to animate
 	const box = document.getElementById("abox"+id);
+	// The url to navigate to
 	const url = "/blog/" + id;
+	// Animation parameters
 	const height = window.innerHeight;
 	const width = window.innerWidth;
 	const top = box.offsetTop, left = box.offsetLeft;
-	box.removeChild(box.firstChild);
+	// This changes the color of all the title and short to white
+	// So that they don't be an interference in the animation
+	// I so wish jquery was here, this could have been so much better
+	const all_text = document.querySelectorAll(".article-box-body");
+	for (let i = 0; i < all_text.length; i++)
+		all_text[i].style.color = "white";
+
 	const t = TweenLite.fromTo(box, 0.2, {position:"absolute", top: top, left: left, color: "white"}, {top: "-10px", bottom: "100px", left: 0, width: width, height: height});
 	t.eventCallback("onComplete", push, [url]);
 }
+
 
 const Article = (props) => {
 	const {id, title, short, posted_time} = props.article;
