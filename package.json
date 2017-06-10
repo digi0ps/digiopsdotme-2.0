@@ -31,6 +31,7 @@
   "homepage": "http://digiops.me",
   "dependencies": {
     "axios": "^0.16.2",
+    "gsap": "^1.19.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-helmet": "^5.1.3",

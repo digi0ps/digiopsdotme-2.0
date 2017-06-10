@@ -1,21 +1,32 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import Axios from 'axios';
 import TimeAgo from 'react-timeago';
 import Helmet from 'react-helmet';
 import {CSSTransitionGroup} from 'react-transition-group';
+import {TweenLite} from 'gsap';
 import HomeLink from './homelink.js';
 import '../css/blog.css';
 
+const ArticleBoxOnClick = (id, push, e) => {
+	const box = document.getElementById("abox"+id);
+	const url = "/blog/" + id;
+	const height = window.innerHeight;
+	const width = window.innerWidth;
+	const top = box.offsetTop, left = box.offsetLeft;
+	box.removeChild(box.firstChild);
+	const t = TweenLite.fromTo(box, 0.2, {position:"absolute", top: top, left: left, color: "white"}, {top: "-10px", bottom: "100px", left: 0, width: width, height: height});
+	t.eventCallback("onComplete", push, [url]);
+}
 
 const Article = (props) => {
 	const {id, title, short, posted_time} = props.article;
 	const html = {__html: short};
-	const url = "/blog/" + id;
 	const d = new Date(posted_time);
 	return (
-		<div className="article-box">
-		<Link to={url}>
+		<div className="article-box"
+			onClick={ArticleBoxOnClick.bind(null,id, props.push)}
+			id={"abox"+id}>
+		<div>
 		<h3>{title}</h3>
 		<p className="article-box-body" dangerouslySetInnerHTML={html}></p>
 		<div className="details">
@@ -23,7 +34,7 @@ const Article = (props) => {
 		<TimeAgo date={d}></TimeAgo>
 		</small>
 		</div>
-		</Link>
+		</div>
  		</div>
 	);
 }
@@ -61,8 +72,11 @@ class Blog extends React.Component {
 
  		const all = this.state.articles;
  		const all_art = all.map((article) => {
+ 			// am passing the history.go funciton to make 
+ 			// a redirect
  			return (
- 				<Article article={article} key={article.id}/>
+ 				<Article article={article} key={article.id}
+ 					push={this.props.history.push}/>
  			);
  		});
  		
