@@ -4,7 +4,9 @@ import {Link} from 'react-router-dom';
 import { CSSTransitionGroup } from 'react-transition-group';
 import{Motion, spring} from 'react-motion';
 import Typing from 'react-typing-animation';
+import Axios from 'axios';
 import '../css/intro.css';
+
 
 const Footer = () => {
 	return (
@@ -65,6 +67,58 @@ const TypingAnimation= () => {
 		</Typing>
 	);
 }
+
+
+class QOTD extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			loaded: false,
+			qotd: {}
+		}
+	}
+
+	componentDidMount() {
+		if (this.state.loaded)
+			return;
+		// Using this free quotes API for now.
+		// Need to change in future
+		const endpoint = "https://favqs.com/api/qotd";
+		Axios.get(endpoint, {"content-type": "application/json"})
+			.then((response) => response.data)
+			.then((qjson) => {
+				console.log(qjson);
+				// Trim to avoid unnecessary spaces
+				/*
+				const quote = qjson.thought.quote.trim();
+				const author = qjson.thought.thoughtAuthor.name;
+				const qotd = Object.assign({}, null, {quote: quote, author: author})
+				this.setState({
+					loaded: true,
+					qotd: qotd
+				})
+				*/
+			})
+	}
+
+	render() {
+		if (!this.state.loaded){
+			return <div></div>
+		}
+		return (
+			<div className="qotd" title="Favourite quote of the day :)">
+			<div className="quote">
+			{this.state.qotd.quote}
+			</div>
+			<div className="author">
+			~{this.state.qotd.author}
+			</div>
+			</div>
+		)
+	}
+}
+
+
 class Intro extends React.Component {
 
 	render() {
@@ -77,6 +131,15 @@ class Intro extends React.Component {
 				<Helmet>
 				<meta name="description" content="Sriram's online hideout."/>
 				</Helmet>
+			{ /* QOTD falldown animatoin */ }
+				<CSSTransitionGroup
+					transitionName="falldown"
+					transitionAppear={true}
+					transitionAppearTimeout={500}
+					transitionEnter={false}
+					transitionLeave={false}>
+				<QOTD />
+				</CSSTransitionGroup>
 				<CSSTransitionGroup
 					transitionName="fade"
 					transitionAppear={true}

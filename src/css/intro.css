@@ -5,7 +5,18 @@
 	align-items: center;
 	flex-direction: column;
 }
-
+.qotd {
+	position: absolute;
+	width: 60%;
+	margin: 0px auto;
+	top: 5px;
+	text-align: center;
+	font-family: "Open Sans", sans-serif;
+	opacity: 0.8;
+}
+.qotd:hover {
+	opacity: 1;
+}
 .title {
 	font-family: "Abel", sans-serif;
 	font-size: 50px;
@@ -60,4 +71,19 @@
 
 * {
 	padding-top: 0;
+}
+
+@media screen and (max-width: 767px) {
+     /* start of medium tablet styles */
+     .qotd {
+     	width: 80%;
+     }
+
+}
+
+@media screen and (max-width: 479px) {
+     /* start of phone styles */
+	.qotd {
+		width: 90%;
+	}
 }
