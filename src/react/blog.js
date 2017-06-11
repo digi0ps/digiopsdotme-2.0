@@ -66,7 +66,7 @@ class Blog extends React.Component {
  	}
 
  	fetchArticles() {
- 		const endpoint = "http://digiops.me/blog/api/articles/";
+ 		const endpoint = "https://digiops.me/blog/api/articles/";
  		Axios.get(endpoint)
  			.then((response) => {
  				const all_articles = response.data;

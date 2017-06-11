@@ -43,7 +43,7 @@ class Article extends React.Component {
 	}
 
 	fetchArticle(id){
-		const endpoint = "http://digiops.me/blog/api/article/" + id;
+		const endpoint = "https://digiops.me/blog/api/article/" + id;
 		Axios.get(endpoint)
 			.then((response) => {
 				const arty = response.data;
