@@ -117,6 +117,7 @@ a:hover {
 
 .quote-appear {
 	opacity: 0.1;
+	transform: translate(0, -10px);
 }
 
 .quote-appear.quote-appear-active {

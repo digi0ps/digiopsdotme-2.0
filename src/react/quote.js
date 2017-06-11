@@ -14,7 +14,7 @@ a new request.
 		super(props);
 		this.state = {
 			loaded: false,
-			qotd: {}
+			qotd: null
 		}
 	}
 
@@ -52,7 +52,7 @@ a new request.
 		const obj = Object.assign({}, null, {quotes: reduced, lastChecked: Date.now()});
 		const store = JSON.stringify(obj);
 		localStorage.setItem(this.props.storeId, store);
-		return q;
+		return reduced;
 	}
 
 	setQuote(quotes) {
@@ -93,8 +93,10 @@ a new request.
 			if (favs.last_page)
 				return favs.quotes;
 		})
-		.then(quotes => this.setLocalStorage(quotes));
-		this.setState({loaded: true});
+		.then(quotes => {
+			const q = this.setLocalStorage(quotes);
+			this.setQuote(q);
+		});
 	}
 
 	tween(height) {
@@ -105,7 +107,7 @@ a new request.
 	}
 
 	render() {
-		if (!this.state.loaded){
+		if (!this.state.qotd){
 			return <div></div>
 		}
 		return (
