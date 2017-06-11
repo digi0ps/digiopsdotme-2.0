@@ -103,3 +103,34 @@ a:hover {
 	transform: translate(0, 0);
 	transition: all 250ms ease-in;
 }
+
+.quote-appear {
+	opacity: 0.1;
+	transform: translate(0, -10px);
+}
+
+.quote-appear.quote-appear-active {
+	opacity: 1;
+	transform: translate(0, 0);
+	transition: all 500ms ease-in;
+}
+
+.quote-appear {
+	opacity: 0.1;
+}
+
+.quote-appear.quote-appear-active {
+	opacity: 1;
+	transform: translate(0, 0);
+	transition: all 500ms ease-in;
+}
+
+.fade-leave {
+ 	opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+	opacity: 0;
+	transform: translate(0, -10px);
+  	transition: opacity 250ms ease-in;
+}
