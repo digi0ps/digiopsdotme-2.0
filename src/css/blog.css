@@ -7,7 +7,7 @@
 
 .blog.header > p {
 	font-family: "Open Sans", sans-serif;
-	font-size: 25px;
+	font-size: 20px;
 	margin-top: 0;
 	opacity: 0.8;
 }
@@ -90,7 +90,7 @@
 	}
 
 	.blog.header > p {
-		font-size: 20px;
+		font-size: 18px;
 	}
 
 	.details {

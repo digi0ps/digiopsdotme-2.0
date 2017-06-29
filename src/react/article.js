@@ -12,8 +12,9 @@ import '../css/article.css';
 const Close = (props) => {
 	return (
 		<div className="close"
-			onClick={CloseClick.bind(null, props.push)}>
-		X
+			onClick={CloseClick.bind(null, props.push)}
+			title="Close this article">
+		<span>X</span>
 		</div>
 	);
 }
@@ -26,20 +27,37 @@ const CloseClick = (push) => {
  	t.eventCallback("onComplete", push, ["/blog"]);
 }
 
+const TopButton = (props) => {
+	return (
+		<div className="gototop"
+		onClick={function(){window.scrollTo(0,0)}}
+		title="Scroll to top">
+		<span>^</span></div>
+	)
+}
 class Article extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
 			loaded: false,
 			article: null,
-			error: false
+			error: false,
+			scrolled: false
 		}
+		this.scrollHandler = this.scrollHandler.bind(this)
 	}
 
 	componentDidMount(){
 		const a_id = this.props.match.params.id;
 		this.fetchArticle(a_id);
 		window.scrollTo(0,0);
+	}
+
+	scrollHandler() {
+		if (window.scrollY > 50 && !this.state.scrolled)
+			this.setState({scrolled: true});
+		else if (window.scrollY < 50 && this.state.scrolled)
+			this.setState({scrolled: false});
 	}
 
 	fetchArticle(id){
@@ -61,7 +79,7 @@ class Article extends React.Component {
 
 	render() {
 		let body = (<center><br />Loading...</center>);
-		
+		window.onscroll = this.scrollHandler
 		if (this.state.loaded){
 			const article = this.state.article;
 			const html = {__html: article.content}
@@ -108,6 +126,7 @@ class Article extends React.Component {
 			>
 			{body}
 			</CSSTransitionGroup>
+			{this.state.scrolled?<TopButton />:""}
 			</div>
 		);
 	}

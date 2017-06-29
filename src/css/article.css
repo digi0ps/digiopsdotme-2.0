@@ -44,6 +44,7 @@
 .article-body a {
 	color: red;
 	text-decoration: none;
+	z-index: 1000;
 }
 
 .article-body a:hover {
@@ -63,15 +64,25 @@
 	Prevents the selection of the X,
 	so that Google doesn't spring up 
 	Chrome for Android
-	*/
-	-webkit-user-select: none;  
-	-moz-user-select: none;     
-	-ms-user-select: none;      
+	*/     
 	user-select: none; 
 }
 
 .close:hover{
 	color: black;
+}
+
+.gototop {
+	font-size: 50px;
+	position: fixed;
+	bottom: 10px;
+	right: 0px;
+	padding: 3px;
+	margin: 0;
+	width: 30px;
+	height: 35px;
+	cursor: pointer;
+	user-select: none;
 }
 @media only screen and (min-width: 450px){
 	.article {
@@ -81,6 +92,10 @@
 
 	.article-body {
 		padding: 20px;
+	}
+
+	.gototop {
+		right: 20px;
 	}
 }
 
