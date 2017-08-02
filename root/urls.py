@@ -1,5 +1,6 @@
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.views.generic import RedirectView
 from blog import urls, views
 
 # Regex to match every url except the ones we want Django to handle
@@ -9,6 +10,7 @@ REGEX = r'^(?!.*(superuser|admin|favicon|static)).*$'
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls')),
+    url(r'^resume', RedirectView.as_view(url="https://drive.google.com/file/d/0B7z6-uPnrClMNHFERjhwSmRXZzA/view")),
     # Superuser URLs
     url(r'superuser/?$', views.super_user_view, name="blog_su"),
     url(r'superuser/create$', views.super_user_create, name="blog_su_create"),
