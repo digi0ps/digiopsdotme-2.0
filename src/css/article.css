@@ -14,9 +14,14 @@
 }
 
 .article-details {
-	width: 93%;
+	width: 95%;
 	margin: 0px auto;
 	margin-top: 30px;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+small {
+	font-size: 15px;
 }
 
 .views {
@@ -55,7 +60,7 @@
 .close {
 	position: absolute;
 	top: 15px;
-	right: 20px;
+	right: 10px;
 	font-size: 30px;
 	color: #2f2f2f;
 	font-weight: bold;
@@ -75,15 +80,15 @@
 .gototop {
 	font-size: 50px;
 	position: fixed;
-	bottom: 10px;
+	bottom: 30px;
 	right: 0px;
 	padding: 3px;
 	margin: 0;
 	width: 30px;
 	height: 35px;
 	cursor: pointer;
-	user-select: none;
 }
+
 @media only screen and (min-width: 450px){
 	.article {
 		padding: 30px;
@@ -97,11 +102,29 @@
 	.gototop {
 		right: 20px;
 	}
+
+	.close {
+		right: 20px;
+	}
 }
 
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 700px){
 	.article {
-		padding: 40px;
+		padding: 15%;
+		padding-top: 30px;
+
+	}
+
+	.article-body {
+		padding: 30px;
+	}
+}
+
+@media only screen and (min-width: 1000px){
+	.article {
+		padding: 20%;
+		padding-top: 30px;
+
 	}
 
 	.article-body {

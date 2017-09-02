@@ -14,7 +14,7 @@ const Close = (props) => {
 		<div className="close"
 			onClick={CloseClick.bind(null, props.push)}
 			title="Close this article">
-		<span>X</span>
+		<img alt="Close this article" src="https://feathericons.com/node_modules/feather-icons/dist/icons/minimize-2.svg" />
 		</div>
 	);
 }
@@ -32,7 +32,7 @@ const TopButton = (props) => {
 		<div className="gototop"
 		onClick={function(){window.scrollTo(0,0)}}
 		title="Scroll to top">
-		<span>^</span></div>
+		<img alt="Close this article" src="https://feathericons.com/node_modules/feather-icons/dist/icons/chevrons-up.svg" /></div>
 	)
 }
 class Article extends React.Component {
