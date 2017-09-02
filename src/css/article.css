@@ -32,7 +32,7 @@ small {
 	padding: 10px;
 	padding-top: 10px;
 	font-family: "Roboto", sans-serif;
-	font-size: 20px;
+	font-size: 15px;
 	line-height: 32px;
 }
 
@@ -94,7 +94,10 @@ small {
 		padding: 30px;
 		padding-top: 40px;
 	}
-
+	
+	.article-body {
+		font-size: 20px;
+	}
 	.article-body {
 		padding: 20px;
 	}

@@ -5,7 +5,7 @@ from blog import urls, views
 
 # Regex to match every url except the ones we want Django to handle
 
-REGEX = r'^(?!.*(superuser|admin|favicon|static)).*$'
+REGEX = r'^(?!.*(superuser|admin|favicons|static)).*$'
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
