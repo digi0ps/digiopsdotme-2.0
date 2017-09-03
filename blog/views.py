@@ -34,7 +34,7 @@ def get_head_data(path):
 	# Set defaults
 	color = "#2B4496"
 	title = "digi0ps"
-	desc = "Sriram's online hideout"
+	desc = "My online hideout"
 	if path == '/':
 		# return default values
 		pass
@@ -71,7 +71,6 @@ def react(request, x=0):
 	v = get_viewers()
 	# destructure data from the get_head_data func
 	(color, desc, title) = get_head_data(request.path)
-	print(get_head_data(request.path))
 	return render(request, "main.html", {
 		"viewers": v,
 		"title": title,
@@ -86,7 +85,6 @@ class all_articles_api(APIView):
 
 	def get(self, request, format=None):
 		articles = Article.objects.order_by("-posted_time")
-		print(articles)
 		for x in articles:
 			x.content = markdown2.markdown(x.content, extras=["tables", "cuddled-lists"])
 		serializer = ArticleListSerial(articles, many=True)
