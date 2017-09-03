@@ -1,0 +1,44 @@
+/* chat.js */
+
+.chat-terminal {
+  height: 100vh;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #000;
+  color: #33ff66;
+  font-family: "Courier New";
+  font-size: 15px;
+  font-weight: 500;
+  overflow: auto;
+}
+
+
+/* chat_input.js */
+
+.chat-input-div {
+  position: absolute;
+  bottom:20px;
+  width: 100%;
+}
+
+.chat-input-div label{
+  max-width: 10%;
+}
+
+.chat-input {
+  min-width: 90%;
+  padding: 2px;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: #33ff66;
+  font-family: "Courier New";
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* messages */
+
+.time {
+  float: right;
+}

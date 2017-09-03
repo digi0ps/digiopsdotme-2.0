@@ -19,6 +19,7 @@ html{
 }
 
 body {
+  height: 100%;
 	margin: 0;
 	background-color: #2B4496;
 	color: white;

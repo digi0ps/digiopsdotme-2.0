@@ -7,6 +7,8 @@ import About from './about.js';
 import Error404 from './404.js';
 import '../css/app.css';
 
+import Chat from './chat/chat.js';
+
 
 class App extends React.Component {
 	render() {
@@ -17,6 +19,7 @@ class App extends React.Component {
 				<Route exact path="/" component={Intro} />
 				<Route path="/about" component={About} />
 				<Route exact path="/blog" component={Blog} />
+				<Route exact path="/chat" component={Chat} />
 				<Route path="/blog/:id" component={Article} />
 				<Route component={Error404} />
 			</Switch>
