@@ -10,7 +10,7 @@ REGEX = r'^(?!.*(superuser|admin|chat|favicons|static)).*$'
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls')),
-    url(r'^chat/', include('chat.urls')),
+    url(r'^chat/api/', include('chat.urls')),
     url(r'^resume', RedirectView.as_view(url="https://drive.google.com/file/d/0B7z6-uPnrClMc2VSbTNuSVJIR1U/view?usp=sharing")),
     # Superuser URLs
     url(r'superuser/?$', views.super_user_view, name="blog_su"),
