@@ -1,11 +1,12 @@
 from rest_framework import serializers
-from chat.models import ChatUser, Message, Room
+from chat.models import Message, Room
+from django.contrib.auth.models import User
 
 
-class ChatUList(serializers.ModelSerializer):
+class UserList(serializers.ModelSerializer):
 		class Meta:
-			model = Room
-			fields = '__all__'
+			model = User
+			fields = ('username', 'password', 'last_login')
 
 
 class MessageList(serializers.ModelSerializer):
