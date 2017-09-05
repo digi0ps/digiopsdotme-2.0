@@ -1,5 +1,5 @@
 import React from 'react';
-
+import TimeAgo from 'react-timeago';
 import Input from './chat_input.js';
 import api from './api.js';
 
@@ -22,22 +22,37 @@ class Chat extends React.Component {
     };
     this.authenticate = this.authenticate.bind(this);
     this.logout = this.logout.bind(this);
+    this.sendMessage = this.sendMessage.bind(this);
+    this.getMessages = this.getMessages.bind(this);
   }
 
   componentDidMount(){
-    d.getElementById("chat-input").focus();
-    console.log("mounted ", this.state.loggedIn);
-    this.getMessages();
+    this.focusInput();
+    const i = setInterval(this.getMessages, 2000);
   }
 
   getMessages(){
+    if(!this.state)
+      return;
     if(this.state.loggedIn){
-      const messages = api.fetchMessages(localStorage.digiChatToken);
+      const messages = api.fetchMessages();
       messages
         .then((messages) => {
           this.setState({messages: messages});
+          this.scroll();
         })
     }
+  }
+
+  sendMessage(content, target="all"){
+    if(!this.state.loggedIn)
+      return;
+    const mes = api.postMessage(content, this.state.username, target);
+    return mes.then((res) => {
+      this.setState({messages: res.data});
+      this.scroll();
+    })
+    .catch((err) => console.log(err));
   }
 
   authenticate(uname, pass){
@@ -63,26 +78,38 @@ class Chat extends React.Component {
     });
   }
 
+  focusInput(){
+    d.getElementById("chat-input").focus();
+  }
+
   logout(){
     localStorage.digiChatToken = "";
     localStorage.digiChatUname = "";
     console.log("logged out");
     this.setState({
       loggedIn: false, 
-      username: "nigga"
+      username: "nigga",
+      messages: []
     });
   }
 
+  scroll(){
+    const box = d.getElementById("messagebox");
+    box.scrollTop = box.scrollHeight;
+  }
+
   render(){
+
     return(
-      <div className="chat-terminal">
-        <div className="messages">
+      <div className="chat-terminal" onClick={this.focusInput}>
+        <div className="messages" onClick={this.focusInput} id="messagebox">
           {
             this.state.messages.map((msg)=>{
+              const d = new Date(msg.time);
               return (
                 <div className="message" key={msg.time}>
                 <strong>{msg.author}:</strong> {msg.content}
-                <small className="time">{msg.time}</small>
+                <small className="time"><TimeAgo date={d}></TimeAgo></small>
                 </div>
               );
             })
@@ -90,6 +117,7 @@ class Chat extends React.Component {
         </div>
         <Input 
         auth={this.authenticate}
+        send={this.sendMessage}
         logout={this.logout}
         username={this.state.username}/>
       </div>
