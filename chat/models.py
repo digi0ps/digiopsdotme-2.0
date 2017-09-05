@@ -26,8 +26,11 @@ class Message(models.Model):
 	content = models.CharField(max_length=3000)
 	time = models.DateTimeField(default=timezone.now, blank=True)
 	target = models.CharField(max_length=30)
-	author = models.ForeignKey(ChatUser)
+	author = models.ForeignKey(User)
 	to = models.ForeignKey(Room)
+
+	class Meta:
+		ordering = ['time']
 
 	def __str__(self):
 		return self.author.username + ": " + self.content

@@ -9,7 +9,8 @@
   font-family: "Courier New";
   font-size: 15px;
   font-weight: 500;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -19,6 +20,7 @@
   position: absolute;
   bottom:20px;
   width: 100%;
+  flex: 0.1;
 }
 
 .chat-input-div label{
@@ -38,7 +40,10 @@
 }
 
 /* messages */
-
+.messages {
+  flex: 0.90;
+  overflow: scroll;
+}
 .time {
   float: right;
 }

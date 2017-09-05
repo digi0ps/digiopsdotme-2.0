@@ -3,7 +3,7 @@ import Axios from 'axios';
 const host = "http://localhost:8000";
 const common = "chat/api";
 const roomid = 1;
-
+const roomname = "testroom"
 const endpoints = {
   auth: `${host}/${common}/obtain-auth-token/`,
   messages: `${host}/${common}/messages/${roomid}/`
@@ -16,19 +16,34 @@ const api = {
       password: pass
     })
   },
-  fetchMessages: (token) => {
+
+  fetchMessages: () => {
     return Axios({
       url: endpoints.messages,
       method: 'get',
-      headers: {'Authorization': `Token ${token}`}
+      headers: {'Authorization': `Token ${localStorage.digiChatToken}`}
     })
     .then((res)=>{
-      console.log(res);
       return res.data;
     })
     .catch((err)=>{
       console.log(err);
     });
+  },
+
+  postMessage: (content, username, target) => {
+    const msg_obj = {
+      content: content,
+      author: username,
+      target: target,
+      to: roomname
+    };
+    return Axios({
+      method: 'post',
+      url: endpoints.messages,
+      headers: {'Authorization': `Token ${localStorage.digiChatToken}`},
+      data: msg_obj
+    })
   }
 }
 

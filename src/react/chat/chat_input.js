@@ -58,6 +58,9 @@ class Input extends React.Component {
         input = input.split(" ");
         this.handleCommand(input);
       } 
+      else {
+        const mes = this.props.send(input);
+      }
 
       this.setState({
         input: ""
