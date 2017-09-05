@@ -2,6 +2,8 @@ from django.shortcuts import render
 from chat.serializers import *
 from chat.models import *
 from django.contrib.auth.models import User
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions, status
@@ -10,6 +12,7 @@ from rest_framework.authtoken.models import Token
 # API naming scheme: get/post_(all)_modelname
 
 
+@method_decorator(csrf_exempt, name="dispatch")
 class get_all_messages(APIView):
 	permission_classes = (permissions.IsAuthenticated,)
 
