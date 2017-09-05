@@ -1,9 +1,10 @@
 import Axios from 'axios';
 
-const host = "http://localhost:8000";
+const host = "https://digiops.me";
 const common = "chat/api";
 const roomid = 1;
-const roomname = "testroom"
+const roomname = "mybois";
+
 const endpoints = {
   auth: `${host}/${common}/obtain-auth-token/`,
   messages: `${host}/${common}/messages/${roomid}/`

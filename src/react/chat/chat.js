@@ -2,6 +2,7 @@ import React from 'react';
 import TimeAgo from 'react-timeago';
 import Input from './chat_input.js';
 import api from './api.js';
+import intro from './intro.js';
 
 import './chat.css';
 
@@ -10,15 +11,18 @@ const d = document;
 class Chat extends React.Component {
   constructor(props){
     super(props);
-    let loggedIn = false, uname="nigga";
+    let loggedIn = false, uname="nigga", messages=[]
     if(localStorage.digiChatToken){
       loggedIn = true;
       uname = localStorage.digiChatUname;
     }
+    if(!loggedIn){
+      messages = intro;
+    }
     this.state = {
       loggedIn: loggedIn,
       username: uname,
-      messages: [],
+      messages: messages,
     };
     this.authenticate = this.authenticate.bind(this);
     this.logout = this.logout.bind(this);
@@ -89,7 +93,7 @@ class Chat extends React.Component {
     this.setState({
       loggedIn: false, 
       username: "nigga",
-      messages: []
+      messages: intro
     });
   }
 
