@@ -32,7 +32,7 @@ class Chat extends React.Component {
 
   componentDidMount(){
     this.focusInput();
-    const i = setInterval(this.getMessages, 2000);
+    setInterval(this.getMessages, 2000);
   }
 
   getMessages(){
@@ -103,12 +103,12 @@ class Chat extends React.Component {
   }
 
   render(){
-
+    const msgs = this.state.messages;
     return(
       <div className="chat-terminal" onClick={this.focusInput}>
         <div className="messages" onClick={this.focusInput} id="messagebox">
           {
-            this.state.messages.map((msg)=>{
+            msgs?msgs.map((msg)=>{
               const d = new Date(msg.time);
               return (
                 <div className="message" key={msg.time}>
@@ -117,6 +117,7 @@ class Chat extends React.Component {
                 </div>
               );
             })
+            :"Authorization error. Please logout and login again."
           }
         </div>
         <Input 

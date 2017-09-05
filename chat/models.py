@@ -16,7 +16,7 @@ class Room(models.Model):
 	name = models.CharField(max_length=30)
 	description = models.CharField(max_length=140)
 	code = models.CharField(max_length=10)
-	members = models.ManyToManyField(ChatUser, related_name="members")
+	members = models.ManyToManyField(User, related_name="members")
 
 	def __str__(self):
 		return self.name

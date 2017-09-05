@@ -59,7 +59,7 @@ class Input extends React.Component {
         this.handleCommand(input);
       } 
       else {
-        const mes = this.props.send(input);
+        this.props.send(input);
       }
 
       this.setState({

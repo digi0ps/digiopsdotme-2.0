@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions, status
+from rest_framework.authtoken.models import Token
 
 # API naming scheme: get/post_(all)_modelname
 
@@ -50,3 +51,8 @@ class get_user(APIView):
 		return Response(ser.data)
 
 
+def erase_and_create(request):
+	Token.objects.all().delete()
+	for user in User.objects.all():
+		Token.objects.get_or_create(user=user)
+	return Response(status=status.HTTP_201_CREATED)
