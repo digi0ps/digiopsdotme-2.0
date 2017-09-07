@@ -103,6 +103,7 @@ class Chat extends React.Component {
   }
 
   render(){
+    const formatter = (value, unit, suffix, date, defaultFormatter) => `${value}${unit[0]} ${suffix}`;
     const msgs = this.state.messages;
     return(
       <div className="chat-terminal" onClick={this.focusInput}>
@@ -113,7 +114,8 @@ class Chat extends React.Component {
               return (
                 <div className="message" key={msg.time}>
                 <strong>{msg.author}:</strong> {msg.content}
-                <small className="time"><TimeAgo date={d}></TimeAgo></small>
+                <small className="time">
+                <TimeAgo date={d} formatter={formatter} minPeriod={60}></TimeAgo></small>
                 </div>
               );
             })
