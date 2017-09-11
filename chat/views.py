@@ -25,7 +25,7 @@ class get_all_messages(APIView):
 	def post(self, request, roomid, format=None):
 		mes = MessageList(data=request.data)
 		if mes.is_valid():
-			m = Message(content=request.data["content"], target=request.data["target"])
+			m = Message(content=request.data["content"], target=request.data["target"], ctime=request.data["ctime"])
 			u = User.objects.get(username=request.data["author"])
 			r = Room.objects.get(name=request.data["to"])
 			m.author = u
