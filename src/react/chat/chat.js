@@ -111,9 +111,9 @@ class Chat extends React.Component {
         <div className="messages" onClick={this.focusInput} id="messagebox">
           {
             msgs?msgs.map((msg)=>{
-              const d = new Date(msg.time);
+              const d = new Date(msg.ctime);
               return (
-                <div className="message" key={msg.ctime}>
+                <div className="message" key={msg.time}>
                 <strong>{msg.author}:</strong> {msg.content}
                 <small className="time">
                 <TimeAgo date={d} formatter={formatter} minPeriod={60}></TimeAgo></small>
