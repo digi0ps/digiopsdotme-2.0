@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import Parser from './parser';
 
 const host = "https://digiops.me";
 const common = "chat/api";
@@ -34,8 +35,9 @@ const api = {
 
   postMessage: (content, username, target) => {
     const now = String(new Date());
+    const parsed_content = Parser(content);
     const msg_obj = {
-      content: content,
+      content: parsed_content,
       author: username,
       target: target,
       to: roomname,

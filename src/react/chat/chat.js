@@ -112,9 +112,10 @@ class Chat extends React.Component {
           {
             msgs?msgs.map((msg)=>{
               const d = new Date(msg.ctime);
+              const html = {__html: msg.content}
               return (
                 <div className="message" key={msg.time}>
-                <strong>{msg.author}:</strong> {msg.content}
+                <strong>{msg.author}:</strong> <span dangerouslySetInnerHTML={html}></span>
                 <small className="time">
                 <TimeAgo date={d} formatter={formatter} minPeriod={60}></TimeAgo></small>
                 </div>

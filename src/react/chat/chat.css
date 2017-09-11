@@ -47,3 +47,9 @@
 .time {
   float: right;
 }
+.message-links {
+  font-weight: 500;
+}
+.message-links:hover {
+  text-decoration: none;
+}
