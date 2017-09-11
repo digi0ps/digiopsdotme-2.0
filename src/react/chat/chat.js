@@ -32,29 +32,47 @@ class Chat extends React.Component {
 
   componentDidMount(){
     this.focusInput();
-    setInterval(this.getMessages, 2000);
+    setInterval(this.getMessages, 3000);
   }
 
   getMessages(){
-    if(!this.state)
+    const s = this.state;
+    if(!s)
       return;
-    if(this.state.loggedIn){
-      const messages = api.fetchMessages();
+    if(s.loggedIn){
+      let lastMessageId = 0;
+      if(s.messages.length)
+        lastMessageId = s.messages[s.messages.length-1].id;
+      const messages = api.fetchMessages(lastMessageId);
       messages
-        .then((messages) => {
-          this.setState({messages: messages});
-          this.scroll();
+        .then((newMessages) => {
+          // Update state only if there are new messages
+          if(newMessages.length){
+            const oldMessages = s.messages.slice();
+            const newState = [...oldMessages, ...newMessages];
+            this.setState({messages: newState});
+            this.scroll();
+          }
         })
     }
   }
 
   sendMessage(content, target="all"){
-    if(!this.state.loggedIn)
+    const s = this.state;
+    if(!s.loggedIn)
       return;
-    const mes = api.postMessage(content, this.state.username, target);
+    let lastMessageId = 0;
+    if(s.messages)
+        lastMessageId = s.messages[s.messages.length-1].id;
+    const mes = api.postMessage(content, this.state.username, target, lastMessageId);
     return mes.then((res) => {
-      this.setState({messages: res.data});
-      this.scroll();
+      const newMessages = res.data;
+      if(newMessages.length){
+        const oldMessages = s.messages.slice();
+        const newState = [...oldMessages, ...newMessages];
+        this.setState({messages: newState});
+        this.scroll();
+      }
     })
     .catch((err) => console.log(err));
   }

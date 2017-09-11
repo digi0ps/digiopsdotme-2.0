@@ -8,7 +8,8 @@ const roomname = "thebois";
 
 const endpoints = {
   auth: `${host}/${common}/obtain-auth-token/`,
-  messages: `${host}/${common}/messages/${roomid}/`
+  messages: `${host}/${common}/messages/${roomid}/`,
+  post: `${host}/${common}/messages/${roomid}/post/`,
 }
 
 const api = {
@@ -19,10 +20,11 @@ const api = {
     })
   },
 
-  fetchMessages: () => {
+  fetchMessages: (lastMessageId) => {
     return Axios({
       url: endpoints.messages,
-      method: 'get',
+      method: 'post',
+      data: {last_id: lastMessageId},
       headers: {'Authorization': `Token ${localStorage.digiChatToken}`}
     })
     .then((res)=>{
@@ -33,7 +35,7 @@ const api = {
     });
   },
 
-  postMessage: (content, username, target) => {
+  postMessage: (content, username, target, lastMessageId) => {
     const now = String(new Date());
     const parsed_content = Parser(content);
     const msg_obj = {
@@ -42,10 +44,11 @@ const api = {
       target: target,
       to: roomname,
       ctime: now,
+      last_id: lastMessageId
     };
     return Axios({
       method: 'post',
-      url: endpoints.messages,
+      url: endpoints.post,
       headers: {'Authorization': `Token ${localStorage.digiChatToken}`},
       data: msg_obj
     })
