@@ -17,10 +17,20 @@ class get_all_messages(APIView):
 	permission_classes = (permissions.IsAuthenticated,)
 
 	def get(self, request, roomid, format=None):
+		pass
+
+	def post(self, request, roomid, format=None):
 		room = Room.objects.get(id=roomid)
-		messages = Message.objects.filter(to=room)
+		messages = Message.objects.filter(to=room).order_by('time')
+		last_id = int(request.data["last_id"])
+		if last_id:
+			messages = [m for m in messages if m.id > last_id]
 		ser = MessageList(messages, many=True)
 		return Response(ser.data)
+
+
+class post_new_message(APIView):
+	permission_classes = (permissions.IsAuthenticated,)
 
 	def post(self, request, roomid, format=None):
 		mes = MessageList(data=request.data)
@@ -32,6 +42,9 @@ class get_all_messages(APIView):
 			m.to = r
 			m.save()
 			messages = Message.objects.filter(to=r).order_by('time')
+			last_id = int(request.data["last_id"])
+			if last_id:
+				messages = [m for m in messages if m.id > last_id]
 			ser = MessageList(messages, many=True)
 			return Response(ser.data, status=status.HTTP_201_CREATED)
 		return Response(mes.errors, status=status.HTTP_400_BAD_REQUEST)
