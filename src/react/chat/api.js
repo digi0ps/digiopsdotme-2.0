@@ -33,11 +33,13 @@ const api = {
   },
 
   postMessage: (content, username, target) => {
+    const now = String(new Date());
     const msg_obj = {
       content: content,
       author: username,
       target: target,
-      to: roomname
+      to: roomname,
+      ctime: now,
     };
     return Axios({
       method: 'post',

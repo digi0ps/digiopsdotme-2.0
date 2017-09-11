@@ -25,6 +25,7 @@ class Room(models.Model):
 class Message(models.Model):
 	content = models.CharField(max_length=3000)
 	time = models.DateTimeField(default=timezone.now, blank=True)
+	ctime = models.CharField(max_length=200, default="Thu Sep 07 2017 15:00:00 GMT+0530 (IST)")
 	target = models.CharField(max_length=30)
 	author = models.ForeignKey(User)
 	to = models.ForeignKey(Room)

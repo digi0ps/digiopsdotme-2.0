@@ -107,19 +107,20 @@ class Chat extends React.Component {
     const msgs = this.state.messages;
     return(
       <div className="chat-terminal" onClick={this.focusInput}>
+      <TimeAgo date=""></TimeAgo>
         <div className="messages" onClick={this.focusInput} id="messagebox">
           {
             msgs?msgs.map((msg)=>{
               const d = new Date(msg.time);
               return (
-                <div className="message" key={msg.time}>
+                <div className="message" key={msg.ctime}>
                 <strong>{msg.author}:</strong> {msg.content}
                 <small className="time">
                 <TimeAgo date={d} formatter={formatter} minPeriod={60}></TimeAgo></small>
                 </div>
               );
             })
-            :"Authorization error. Please logout and login again."
+            :"Authorization error. Please try again."
           }
         </div>
         <Input 
