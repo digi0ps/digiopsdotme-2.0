@@ -20,7 +20,8 @@ const api = {
     })
   },
 
-  fetchMessages: (lastMessageId) => {
+  fetchMessages: (lastMessageId = 0) => {
+    console.log(lastMessageId);
     return Axios({
       url: endpoints.messages,
       method: 'post',

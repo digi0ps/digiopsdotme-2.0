@@ -78,6 +78,7 @@ class Input extends React.Component {
           className="chat-input" 
           placeholder={helper.placeholder}
           onChange={this.setInput}
+          onFocus={this.props.setTitle}
           onKeyPress={this.handleKeyPress} 
           value={this.state.input}/>
       </div>

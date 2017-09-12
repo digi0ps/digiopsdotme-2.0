@@ -35,6 +35,11 @@ class Chat extends React.Component {
     setInterval(this.getMessages, 3000);
   }
 
+  setTitle = (string) => {
+    console.log('sup');
+    document.getElementsByTagName("title")[0].innerHTML = string;
+  }
+
   getMessages(){
     const s = this.state;
     if(!s)
@@ -43,17 +48,21 @@ class Chat extends React.Component {
       let lastMessageId = 0;
       if(s.messages.length)
         lastMessageId = s.messages[s.messages.length-1].id;
+      console.log(lastMessageId);
       const messages = api.fetchMessages(lastMessageId);
       messages
         .then((newMessages) => {
+          if (!newMessages)
+            return;
           // Update state only if there are new messages
           if(newMessages.length){
+            this.setTitle("digiChat (new messages)");
             const oldMessages = s.messages.slice();
             const newState = [...oldMessages, ...newMessages];
             this.setState({messages: newState});
             this.scroll();
           }
-        })
+        });
     }
   }
 
@@ -124,8 +133,10 @@ class Chat extends React.Component {
     const formatter = (value, unit, suffix, date, defaultFormatter) => `${value}${unit[0]} ${suffix}`;
     const msgs = this.state.messages;
     return(
-      <div className="chat-terminal" onClick={this.focusInput}>
-      <TimeAgo date=""></TimeAgo>
+      <div 
+        className="chat-terminal" 
+        onClick={this.focusInput}>
+
         <div className="messages" onClick={this.focusInput} id="messagebox">
           {
             msgs?msgs.map((msg)=>{
@@ -139,14 +150,15 @@ class Chat extends React.Component {
                 </div>
               );
             })
-            :"Authorization error. Please try again."
+            :"Authorization error. Please check your internet connection."
           }
         </div>
         <Input 
         auth={this.authenticate}
         send={this.sendMessage}
         logout={this.logout}
-        username={this.state.username}/>
+        username={this.state.username}
+        setTitle={() => this.setTitle("digiChat")}/>
       </div>
     );
   }

@@ -42,7 +42,7 @@
 /* messages */
 .messages {
   flex: 0.90;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .time {
   float: right;
@@ -53,3 +53,4 @@
 .message-links:hover {
   text-decoration: none;
 }
+
