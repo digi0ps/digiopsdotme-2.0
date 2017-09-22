@@ -54,3 +54,13 @@
   text-decoration: none;
 }
 
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 12px;  
+    /* background: transparent; */
+}
+
+/* ::-moz-scrollbar {
+    width: 0px;  
+    background: transparent;
+} */

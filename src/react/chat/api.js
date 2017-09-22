@@ -26,7 +26,7 @@ const api = {
       url: endpoints.messages,
       method: 'post',
       data: {last_id: lastMessageId},
-      headers: {'Authorization': `Token ${localStorage.digiChatToken}`}
+      headers: {'Authorization': `Token ${sessionStorage.digiChatToken}`}
     })
     .then((res)=>{
       return res.data;
@@ -50,7 +50,7 @@ const api = {
     return Axios({
       method: 'post',
       url: endpoints.post,
-      headers: {'Authorization': `Token ${localStorage.digiChatToken}`},
+      headers: {'Authorization': `Token ${sessionStorage.digiChatToken}`},
       data: msg_obj
     })
   }

@@ -73,15 +73,21 @@ const intro = [
   },
   {
     author: "ChatBot",
-    content: "[UPDATE] TIME BUG HAS BEEN FIXED.",
+    content: "[UPDATE] Time bug has been fixed.",
     "target": "all",
     "time": "13"
   },
   {
     author: "ChatBot",
-    content: "[UPDATE] HUGE PERFORMANCE IMPROVEMENTS.",
+    content: "[UPDATE] Huge performance improvements.",
     "target": "all",
     "time": "14"
+  },
+  {
+    author: "ChatBot",
+    content: "[UPDATE] You get logged out when you close the website.",
+    "target": "all",
+    "time": "15"
   },
 ]
 

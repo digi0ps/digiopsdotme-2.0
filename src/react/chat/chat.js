@@ -12,9 +12,9 @@ class Chat extends React.Component {
   constructor(props){
     super(props);
     let loggedIn = false, uname="nigga", messages=[]
-    if(localStorage.digiChatToken){
+    if(sessionStorage.digiChatToken){
       loggedIn = true;
-      uname = localStorage.digiChatUname;
+      uname = sessionStorage.digiChatUname;
     }
     if(!loggedIn){
       messages = intro;
@@ -36,7 +36,6 @@ class Chat extends React.Component {
   }
 
   setTitle = (string) => {
-    console.log('sup');
     document.getElementsByTagName("title")[0].innerHTML = string;
   }
 
@@ -96,8 +95,8 @@ class Chat extends React.Component {
     return res.then((res) => {
 
         if(res.data.token){
-          localStorage.digiChatToken = res.data.token;
-          localStorage.digiChatUname = uname;
+          sessionStorage.digiChatToken = res.data.token;
+          sessionStorage.digiChatUname = uname;
           this.setState({
             loggedIn: true,
             username: uname
@@ -114,8 +113,8 @@ class Chat extends React.Component {
   }
 
   logout(){
-    localStorage.digiChatToken = "";
-    localStorage.digiChatUname = "";
+    sessionStorage.digiChatToken = "";
+    sessionStorage.digiChatUname = "";
     console.log("logged out");
     this.setState({
       loggedIn: false, 
