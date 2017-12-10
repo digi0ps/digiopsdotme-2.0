@@ -1,136 +1,97 @@
+/* article.css */
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
 .article {
-	background-color: #fff;
-	color: #2f2f2f;
-	padding: 20px;
-	padding-top: 40px;
+  background-color: #fff;
 }
 
-.article-header {
-	font-family: "Ubuntu", sans-serif;
-	color: #2f2f2f;
-	margin-top: 0;
-	padding-top: 25px;
+.article-main {
+  margin: 0px auto;
+  max-width: 600px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  padding: 2em 1em;
+  color: #424242;
 }
 
-.article-details {
-	width: 95%;
-	margin: 0px auto;
-	margin-top: 30px;
-	font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+.article-title {
+  margin-top: .5em;
+  margin-bottom: 0;
+  padding-top: .5em;
+  font-weight: 300;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: #333;
 }
 
-small {
-	font-size: 15px;
+.article-main h2{
+  margin-left: 0;
+  padding-left: 0;
+}
+.article-body{
+  font-size: 1.2em;
+  font-weight: 250;
+  margin-left: 2px;
 }
 
-.views {
-	float: left;
+.article-body strong{
+  font-weight: 400;
 }
 
-.article-body {
-	padding: 10px;
-	padding-top: 10px;
-	font-family: "Roboto", sans-serif;
-	font-size: 15px;
-	line-height: 32px;
-}
-
-/* In article rules */
-.article-body img {
-	margin: 10px auto;
-	max-width: 300px;
-	max-height: 300px;
-}
-.article-body ul {
-	margin-bottom: 0;
-}
-
-.article-body a {
-	color: red;
-	text-decoration: none;
-	z-index: 1000;
+.article-body a{
+  color: red;
+  text-decoration: none;
+  z-index: 1000;
 }
 
 .article-body a:hover {
-	color: darkred;
-	text-decoration: none;
+  color: darkred;
+  text-decoration: none;
+}
+
+.article-date {
+  font-size: 1em;
+  color: #566b78;
+  font-weight: 300;
+  margin-left: 2px;
 }
 
 .close {
-	position: absolute;
-	top: 15px;
-	right: 10px;
-	font-size: 30px;
-	color: #2f2f2f;
-	font-weight: bold;
-	cursor: pointer;
-	/*
-	Prevents the selection of the X,
-	so that Google doesn't spring up 
-	Chrome for Android
-	*/     
-	user-select: none; 
-}
-
-.close:hover{
-	color: black;
+  position: absolute;
+  width: 100%;
+  font-size: 30px;
+  color: #2f2f2f;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  /*
+  Prevents the selection of the X,
+  so that Google doesn't spring up 
+  Chrome for Android
+  */     
+  user-select: none; 
 }
 
 .gototop {
-	font-size: 50px;
-	position: fixed;
-	bottom: 30px;
-	right: 0px;
-	padding: 3px;
-	margin: 0;
-	width: 30px;
-	height: 35px;
-	cursor: pointer;
+  font-size: 2em;
+  position: fixed;
+  bottom: 10px;
+  right: 0px;
+  padding: 3px;
+  margin: 0;
+  width: 40px;
+  height: 45px;
+  cursor: pointer;
+  /*
+  Prevents the selection of the X,
+  so that Google doesn't spring up 
+  Chrome for Android
+  */     
+  user-select: none; 
 }
 
-@media only screen and (min-width: 450px){
-	.article {
-		padding: 30px;
-		padding-top: 40px;
-	}
-	
-	.article-body {
-		font-size: 20px;
-	}
-	.article-body {
-		padding: 20px;
-	}
-
-	.gototop {
-		right: 20px;
-	}
-
-	.close {
-		right: 20px;
-	}
-}
-
-@media only screen and (min-width: 700px){
-	.article {
-		padding: 15%;
-		padding-top: 30px;
-
-	}
-
-	.article-body {
-		padding: 30px;
-	}
-}
-
-@media only screen and (min-width: 1000px){
-	.article {
-		padding: 20%;
-		padding-top: 30px;
-
-	}
-
-	.article-body {
-		padding: 30px;
-	}
+@media screen and (max-width: 400px){
+  .article-title {
+    font-size: 2.3em;
+  }
 }
