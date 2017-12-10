@@ -12,7 +12,7 @@ class About extends React.Component {
 		return (
 		<div className="portfolio-con">
 		<Helmet>
-		<title>About me ~ digi0ps</title>
+		<title>About me</title>
 		<meta name="description" content="This might tell quite something about me." />
 		</Helmet>
 		<HomeLink />
