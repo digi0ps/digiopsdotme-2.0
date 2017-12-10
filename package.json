@@ -31,7 +31,6 @@
   "homepage": "http://digiops.me",
   "dependencies": {
     "axios": "^0.16.2",
-    "bulma": "^0.6.1",
     "gsap": "^1.19.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",

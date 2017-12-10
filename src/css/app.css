@@ -5,7 +5,7 @@
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
-@import url('https://fonts.googleapis.com/css?family=Abel|Ubuntu|Roboto|Lato|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Abel|Roboto:300,400,500|Open+Sans');
 
 * {
 	box-sizing: border-width;
