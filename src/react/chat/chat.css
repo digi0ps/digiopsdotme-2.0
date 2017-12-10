@@ -55,12 +55,13 @@
 }
 
 /* scroll bar */
+/* 
 ::-webkit-scrollbar {
     width: 12px;  
-    /* background: transparent; */
-}
+    background: transparent;
+} 
 
-/* ::-moz-scrollbar {
+::-moz-scrollbar {
     width: 0px;  
     background: transparent;
 } */
