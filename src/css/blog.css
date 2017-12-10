@@ -1,15 +1,16 @@
 
 .blog.header > h2 {
-	font-family: "Open Sans", sans-serif;
+	font-family: "Roboto", sans-serif;
 	margin-top: 50px;
 	font-size: 30px;
+	font-weight: 400;
+	text-transform: uppercase;
 }
 
 .blog.header > p {
 	font-family: "Open Sans", sans-serif;
 	font-size: 20px;
 	margin-top: 0;
-	opacity: 0.8;
 }
 
 .articles {
@@ -24,35 +25,34 @@
 	height: 125px;
 	overflow: hidden;
 	margin: 10px auto;
-	color: #2f2f2f;
+	color: #424242;
 	padding-right: 10px;
 	padding-left: 10px;
 	border-radius: 5px;
 	cursor: pointer;
 }
 
-.article-box > h3 {
-	font-family: "Ubuntu", sans-serif;
-	font-size: 28px;
-	font-weight: bold;
-	color: #2f2f2f;
+.article-box h3 {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	color: #424242;
 	cursor: pointer;
 }
 
 .article-box-body {
 	font-family: "Roboto", sans-serif;
 	font-size: 15px;
-	color: #2f2f2f;
+	color: #424242;
 	opacity: 0.9;
 	margin: 0;
 }
 
 .article-box a {
-	color: #2f2f2f;
+	color: #424242;
 }
 
 .article-box a:hover {
-	color: #2f2f2f;
+	color: #424242;
 	text-decoration: none;
 }
 
