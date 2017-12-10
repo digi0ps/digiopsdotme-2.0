@@ -3,6 +3,8 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	padding: 1em 0.5em;
+	padding-top: 2em;
 }
 
 .portfolio a {
@@ -14,14 +16,19 @@
 	text-decoration-color: #dfff00;
 }
 
-.header {
-	font-size: 30px;
-	font-weight: bold;
+.header h1{
+	font-size: 50px;
+	font-weight: 400;
 	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
 }
 
+.body h3 {
+	font-size: 25px;
+	font-weight: 400;
+}
 .toolazy {
-	width: 50%;
+	max-width: 700px;
 	margin: 10px auto;
 	height: 40px;
 	line-height: 40px;
@@ -30,9 +37,10 @@
 }
 
 .body {
-	width: 70%;
+	max-width: 700px;
 	margin: 10px auto;
-	font-family: "Lato", sans-serif;
+	font-family: "Roboto", sans-serif;
+	font-weight: 250;
 	font-size: 18px;
 	line-height: 25px;
 }
@@ -50,19 +58,16 @@
 	text-decoration: none;
 }
 
-@media only screen and (max-width: 800px){
-	.body {
-		width: 80%;
-	}
-	.toolazy {
-		width: 70%;
-	}
-}
 @media only screen and (max-width: 500px){
-	.body {
-		width: 90%;
+	.header h1 {
+		font-size: 40px;
+		font-weight: 350;
 	}
-	.toolazy {
-		width: 90%;
+	.body h3 {
+		font-size: 20px;
+		font-weight: 380;
+	}
+	.body {
+		font-size: 15px;
 	}
 }
