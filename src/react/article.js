@@ -5,16 +5,15 @@ import {Redirect} from 'react-router-dom';
 import {CSSTransitionGroup} from 'react-transition-group';
 import TweenLite from 'gsap';
 import TimeAgo from 'react-timeago';
+
 import '../css/article.css';
-
-
 
 const Close = (props) => {
 	return (
 		<div className="close"
 			onClick={CloseClick.bind(null, props.push)}
 			title="Close this article">
-		<img alt="Close this article" src="https://feathericons.com/node_modules/feather-icons/dist/icons/minimize-2.svg" />
+		<img alt="Close this article" src="https://feathericons.com/node_modules/feather-icons/dist/icons/chevrons-down.svg" />
 		</div>
 	);
 }
@@ -85,21 +84,22 @@ class Article extends React.Component {
 			const html = {__html: article.content}
 			const d = new Date(article.posted_time);
 			body = (
-				<div key={article.id}>
+				<div className="article_" key={article.id}>
+
 				<Helmet>
-				<title>{article.title} - digi0ps</title>
+				<title>{article.title}</title>
 				<meta name="description" content={article.short} />
 				<meta name="theme-color" content="#ffffff" />
 				</Helmet>
-				<h1 className="article-header center">{article.title}</h1>
-				<div className="article-details">
-				<small className="time">
+
+				<div className="container article-main">
+				<h1 className="article-title">{article.title}</h1>
+				<p className="article-date">
 				<TimeAgo date={d}></TimeAgo>
-				</small>
-				<small className="views">{article.views} Views</small>
-				</div>
+				</p>
 				<div className="article-body"
 				dangerouslySetInnerHTML={html} />
+				</div>
 				</div>
 			);
 		}
