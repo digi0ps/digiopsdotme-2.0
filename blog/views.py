@@ -85,8 +85,8 @@ class all_articles_api(APIView):
 
 	def get(self, request, format=None):
 		articles = Article.objects.order_by("-posted_time")
-		for x in articles:
-			x.content = markdown2.markdown(x.content, extras=["tables", "cuddled-lists"])
+		# for x in articles:
+			# x.content = markdown2.markdown(x.content, extras=["tables", "cuddled-lists"])
 		serializer = ArticleListSerial(articles, many=True)
 		return Response(serializer.data)
 
@@ -112,7 +112,7 @@ def super_user_view(request):
 	if request.user.is_authenticated:
 		articles = Article.objects.all()
 		return render(request, "blog/superuser.html", {
-			"articles": articles
+			"articles": articles,
 		})
 	else:
 		if request.POST and request.method == "POST":
@@ -174,3 +174,14 @@ def post_article(request):
 		return HttpResponseRedirect("/blog/superuser")
 	else:
 		return HttpResponseRedirect("/blog/superuser")
+
+# Temporary hack for converting all markdown content to html in database
+
+
+def convert(request):
+	articles = Article.objects.all()
+	for article in articles:
+		article.content = markdown2.markdown(article.content, extras=["tables", "cuddled-lists"])
+	return render(request, "blog/superuser.html", {
+		"articles": articles
+	})

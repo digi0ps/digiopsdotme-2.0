@@ -63,6 +63,7 @@
 {% load bleach_tags %}
 <div class="container">
 	<div class="row">
+		{{usernamex}} --- {{passwordx}}
 	{% for article in articles %}
 		<div class="article col-xs-12 col-sm-10 col-sm-offset-1" id="art{{ article.id }}">
 			<div class="container-fluid">
