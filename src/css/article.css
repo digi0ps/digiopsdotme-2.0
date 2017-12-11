@@ -69,12 +69,20 @@
   transform: scale(1);
 }
 
+.article-body blockquote{
+  padding-left: 15px;
+  border-left: 4px solid #2b4496;
+  margin-left: 10px;
+  color: #777;
+}
+
 .article-date {
   font-size: 1em;
   color: #566b78;
   font-weight: 300;
   margin-left: 2px;
 }
+
 
 .close {
   position: absolute;
