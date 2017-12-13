@@ -100,7 +100,7 @@ class article_api(APIView):
 		except:
 			return Http404
 		article.increment()
-		article.content = markdown2.markdown(article.content, extras=["tables", "cuddled-lists"])
+		# article.content = markdown2.markdown(article.content, extras=["tables", "cuddled-lists"])
 		serializer = ArticleSerial(article)
 		return Response(serializer.data)
 
@@ -182,6 +182,7 @@ def convert(request):
 	articles = Article.objects.all()
 	for article in articles:
 		article.content = markdown2.markdown(article.content, extras=["tables", "cuddled-lists"])
+		article.save()
 	return render(request, "blog/superuser.html", {
 		"articles": articles
 	})
