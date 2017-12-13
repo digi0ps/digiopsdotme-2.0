@@ -96,11 +96,11 @@ if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'ebdb',
-            'USER': 'digiops',
-            'PASSWORD': 'password(RDS);',
-            'HOST': 'mydbinstance.ctv9vi1kuamu.ap-south-1.rds.amazonaws.com',
-            'PORT': 5432,
+            'NAME': os.environ['RDS_DB_NAME'],
+            'USER': os.environ['RDS_USERNAME'],
+            'PASSWORD': os.environ['RDS_PASSWORD'],
+            'HOST': os.environ['RDS_HOSTNAME'],
+            'PORT': os.environ['RDS_PORT'],
         }
     }
     SECRET_KEY = os.environ['SECRET_KEY']
