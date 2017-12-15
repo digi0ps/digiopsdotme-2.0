@@ -50,6 +50,17 @@ class Article extends React.Component {
 		const a_id = this.props.match.params.id;
 		this.fetchArticle(a_id);
 		window.scrollTo(0,0);
+
+		// Attach Twitter's widget.js once everything loads
+		const s = document.createElement("script");
+		s.id = "twitter-wjs";
+		s.type = "text/javascript";
+		s.async = true;
+		s.defer = true;
+		s.src = "https://platform.twitter.com/widgets.js";
+		document.body.onload = function(){
+			document.body.appendChild(s);
+		}
 	}
 
 	scrollHandler() {

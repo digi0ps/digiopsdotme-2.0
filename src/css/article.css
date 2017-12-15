@@ -119,8 +119,36 @@
   user-select: none; 
 }
 
+
 @media screen and (max-width: 400px){
-  .article-title {
+  .article-title { 
     font-size: 2.3em;
   }
 }
+
+.twitter-tweet {
+  margin: 0px auto;
+}
+
+/*
+Twitter card related css
+
+.SandboxRoot {
+  font-family: "Roboto", sans-serif;
+}
+
+.MediaCard-borderOverlay {
+  border: none;
+}
+
+.MediaCard--mediaForward .MediaCard-media {
+  background-color: #fff;
+}
+
+.EmbeddedTweet--mediaForward .EmbeddedTweet-tweet {
+  border: none;
+}
+
+blockquote.Tweet {
+  padding: 0 20px;
+} */
