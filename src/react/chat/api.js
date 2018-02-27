@@ -1,7 +1,7 @@
 import Axios from 'axios';
 import Parser from './parser';
 
-const host = "https://digiops.me";
+const host = "/";
 const common = "chat/api";
 const roomid = 2;
 const roomname = "thebois";
