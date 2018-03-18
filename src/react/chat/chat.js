@@ -35,7 +35,7 @@ class Chat extends React.Component {
     setInterval(this.getMessages, 3000);
   }
 
-  setTitle = (string) => {
+  setTitle(string) {
     document.getElementsByTagName("title")[0].innerHTML = string;
   }
 

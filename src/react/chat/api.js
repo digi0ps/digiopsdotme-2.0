@@ -1,7 +1,7 @@
 import Axios from 'axios';
 import Parser from './parser';
 
-const host = "/";
+const host = window.location.origin;
 const common = "chat/api";
 const roomid = 2;
 const roomname = "thebois";
