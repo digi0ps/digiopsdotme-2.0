@@ -1,0 +1,20 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "folder_exclude_patterns": ["node_modules", "static", "build"]
+        }
+    ],
+    "settings": {
+        "js_prettier": {
+            "auto_format_on_save": true,
+            "auto_format_on_save_excludes": ["*/node_modules/*", "*/.git/*", "static", "build", "root", "blog", "chat"],
+            "prettier_options": {
+                "tabWidth": 2,
+                "singleQuote": false,
+                "semi": true,
+                "trailingComma": "all"
+            }
+        }
+    }
+}

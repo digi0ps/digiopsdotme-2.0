@@ -1,136 +1,135 @@
-
 .article {
-	background-color: #fff;
-	color: #2f2f2f;
-	padding: 20px;
-	padding-top: 40px;
+  background-color: #fff;
+  color: #2f2f2f;
+  padding: 20px;
+  padding-top: 40px;
 }
 
 .article-header {
-	font-family: "Ubuntu", sans-serif;
-	color: #2f2f2f;
-	margin-top: 0;
-	padding-top: 25px;
+  font-family: "Ubuntu", sans-serif;
+  color: #2f2f2f;
+  margin-top: 0;
+  padding-top: 25px;
 }
 
 .article-details {
-	width: 95%;
-	margin: 0px auto;
-	margin-top: 30px;
-	font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 95%;
+  margin: 0px auto;
+  margin-top: 30px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
 }
 
 small {
-	font-size: 15px;
+  font-size: 15px;
 }
 
 .views {
-	float: left;
+  float: left;
 }
 
 .article-body {
-	padding: 10px;
-	padding-top: 10px;
-	font-family: "Roboto", sans-serif;
-	font-size: 15px;
-	line-height: 32px;
+  padding: 10px;
+  padding-top: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 32px;
 }
 
 /* In article rules */
 .article-body img {
-	margin: 10px auto;
-	max-width: 300px;
-	max-height: 300px;
+  margin: 10px auto;
+  max-width: 300px;
+  max-height: 300px;
 }
 .article-body ul {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .article-body a {
-	color: red;
-	text-decoration: none;
-	z-index: 1000;
+  color: red;
+  text-decoration: none;
+  z-index: 1000;
 }
 
 .article-body a:hover {
-	color: darkred;
-	text-decoration: none;
+  color: darkred;
+  text-decoration: none;
 }
 
 .close {
-	position: absolute;
-	top: 15px;
-	right: 10px;
-	font-size: 30px;
-	color: #2f2f2f;
-	font-weight: bold;
-	cursor: pointer;
-	/*
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  font-size: 30px;
+  color: #2f2f2f;
+  font-weight: bold;
+  cursor: pointer;
+  /*
 	Prevents the selection of the X,
 	so that Google doesn't spring up 
 	Chrome for Android
-	*/     
-	user-select: none; 
+	*/
+  user-select: none;
 }
 
-.close:hover{
-	color: black;
+.close:hover {
+  color: black;
 }
 
 .gototop {
-	font-size: 50px;
-	position: fixed;
-	bottom: 30px;
-	right: 0px;
-	padding: 3px;
-	margin: 0;
-	width: 30px;
-	height: 35px;
-	cursor: pointer;
+  font-size: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 0px;
+  padding: 3px;
+  margin: 0;
+  width: 30px;
+  height: 35px;
+  cursor: pointer;
 }
 
-@media only screen and (min-width: 450px){
-	.article {
-		padding: 30px;
-		padding-top: 40px;
-	}
-	
-	.article-body {
-		font-size: 20px;
-	}
-	.article-body {
-		padding: 20px;
-	}
+@media only screen and (min-width: 450px) {
+  .article {
+    padding: 30px;
+    padding-top: 40px;
+  }
 
-	.gototop {
-		right: 20px;
-	}
+  .article-body {
+    font-size: 20px;
+  }
+  .article-body {
+    padding: 20px;
+  }
 
-	.close {
-		right: 20px;
-	}
+  .gototop {
+    right: 20px;
+  }
+
+  .close {
+    right: 20px;
+  }
 }
 
-@media only screen and (min-width: 700px){
-	.article {
-		padding: 15%;
-		padding-top: 30px;
+@media only screen and (min-width: 700px) {
+  .article {
+    padding: 15%;
+    padding-top: 30px;
+  }
 
-	}
-
-	.article-body {
-		padding: 30px;
-	}
+  .article-body {
+    padding: 30px;
+  }
 }
 
-@media only screen and (min-width: 1000px){
-	.article {
-		padding: 20%;
-		padding-top: 30px;
+@media only screen and (min-width: 1000px) {
+  .article {
+    padding: 20%;
+    padding-top: 30px;
+  }
 
-	}
-
-	.article-body {
-		padding: 30px;
-	}
+  .article-body {
+    padding: 30px;
+  }
 }

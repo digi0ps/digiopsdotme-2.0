@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './react/app.js';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./react/app.js";
 
-const root_id = "react-root-container"
+const root_id = "react-root-container";
 const root_element = document.getElementById(root_id);
 
 ReactDOM.render(<App />, root_element);
-
 
 /*
 ::FEW JAVASCRIPT CONDUCT RULES FOR WRITING CODE::
