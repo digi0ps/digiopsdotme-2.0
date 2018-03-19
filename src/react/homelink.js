@@ -14,7 +14,7 @@ const HomeLink = () => {
   return (
     <CSSTransitionGroup
       transitionName="falldown"
-      transitionAppear={true}
+      transitionAppear
       transitionAppearTimeout={300}
       transitionEnter={false}
       transitionLeave={false}

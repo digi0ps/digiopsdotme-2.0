@@ -9,7 +9,9 @@
     "build": "mkdir public; react-scripts build; python manage.py collectstatic; rm -rf public",
     "deploy": "clear; echo 'Make sure you are in Master and the working tree is ready to be commited.'; echo 'This command will ADD/COMMIT/PUSH and DEPLOY'; echo 'Press Ctrl+C to cancel and Enter to go ahead'; read; source ../bin/activate; mkdir public; react-scripts build; rm -rf public; ./manage.py collectstatic; read -p 'Enter commit message' cmtmsg; git add .; git commit -m \"$cmtmsg\"; git push origin master; eb deploy;",
     "precommit": "lint-staged",
-    "format": "prettier --config prettier.config.js --write '**/*.{js,jsx,css}'"
+    "format": "prettier --config prettier.config.js --write '**/*.{js,jsx,css}'",
+    "lint": "eslint --config .eslintrc.json --ext js,jsx .",
+    "lint-fix": "eslint --config .eslintrc.json --ext js,jsx --fix ."
   },
   "repository": {
     "type": "git",
@@ -32,7 +34,7 @@
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
-      "prettier --write",
+      "prettier --config prettier.config.js --write",
       "git add"
     ]
   },
@@ -50,6 +52,15 @@
     "react-typing-animation": "^1.0.10"
   },
   "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^6.0.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
     "react-scripts": "^1.0.7"

@@ -139,7 +139,7 @@ class Article extends React.Component {
         <Close push={this.props.history.push} />
         <CSSTransitionGroup
           transitionName="fade"
-          transitionAppear={true}
+          transitionAppear
           transitionAppearTimeout={250}
           transitionEnterTimeout={500}
           transitionLeaveTimeout={500}

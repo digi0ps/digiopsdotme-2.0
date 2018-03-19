@@ -38,7 +38,7 @@ a new request.
     // q - Array of quotes
     // Returns q
 
-    //localStorage ID
+    // localStorage ID
     // adds the current time in milliseconds
     const reduced = q.map(obj => {
       // reduces the query object to
@@ -57,7 +57,7 @@ a new request.
   setQuote(quotes) {
     // An array of my favourite quotes
 
-    //RandomIntegerGenerator between (0, max)
+    // RandomIntegerGenerator between (0, max)
     const randInt = max => {
       const min = 0;
       max = Math.floor(max);
@@ -97,7 +97,7 @@ a new request.
   }
 
   tween(height) {
-    var auth = document.getElementById("auth");
+    const auth = document.getElementById("auth");
     const translate = "translate(0," + height + "px)";
     const opacity = height ? 0 : 1;
     TweenLite.to(auth, 0.5, { transform: translate, opacity: opacity });

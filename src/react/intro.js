@@ -75,7 +75,7 @@ const TypingAnimation = () => {
 
 class Intro extends React.Component {
   render() {
-    //Dynamically set the height of the container
+    // Dynamically set the height of the container
     const style = {
       height: window.innerHeight,
     };
@@ -88,7 +88,7 @@ class Intro extends React.Component {
         <CSSTransitionGroup
           className="qotd"
           transitionName="quote"
-          transitionAppear={true}
+          transitionAppear
           transitionAppearTimeout={500}
           transitionEnter={false}
           transitionLeaveTimeout={250}
@@ -97,7 +97,7 @@ class Intro extends React.Component {
         </CSSTransitionGroup>
         <CSSTransitionGroup
           transitionName="fade"
-          transitionAppear={true}
+          transitionAppear
           transitionAppearTimeout={500}
           transitionEnter={false}
           transitionLeave={false}
