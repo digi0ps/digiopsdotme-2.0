@@ -1,5 +1,5 @@
 /* article.css */
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+@import 'https://fonts.googleapis.com/css?family=Roboto:300, 400, 500';
 
 .article {
   background-color: #fff;
@@ -15,51 +15,51 @@
 }
 
 .article-title {
-  margin-top: .5em;
+  margin-top: 0.5em;
   margin-bottom: 0;
-  padding-top: .5em;
+  padding-top: 0.5em;
   font-weight: 300;
   font-size: 2.5em;
   text-transform: uppercase;
   color: #333;
 }
 
-.article-main h2{
+.article-main h2 {
   margin-left: 0;
   padding-left: 0;
 }
-.article-body{
+.article-body {
   font-size: 1.2em;
   font-weight: 250;
   margin-left: 2px;
 }
 
-.article-body strong{
+.article-body strong {
   font-weight: 400;
 }
 
-.article-body a{
-  color: #EF5350;
+.article-body a {
+  color: #ef5350;
   text-decoration: none;
   position: relative;
   z-index: 1000;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .article-body a:hover {
   text-decoration: none;
-  color: #EF5350;
+  color: #ef5350;
 }
 
 .article-body a::before {
   content: "";
-  background-color: #F44336;
+  background-color: #f44336;
   width: 98%;
   height: 2px;
   position: absolute;
   bottom: 0;
   right: 1%;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
   transform: scaleX(0);
   opacity: 0.3;
 }
@@ -69,13 +69,12 @@
   transform: scale(1);
 }
 
-.article-body blockquote{
+.article-body blockquote {
   padding-left: 15px;
   border-left: 4px solid #2b4496;
   margin-left: 10px;
   color: #777;
 }
-
 
 .article-date {
   font-size: 1em;
@@ -96,8 +95,8 @@
   Prevents the selection of the X,
   so that Google doesn't spring up 
   Chrome for Android
-  */     
-  user-select: none; 
+  */
+  user-select: none;
 }
 
 .gototop {
@@ -115,13 +114,12 @@
   Prevents the selection of the X,
   so that Google doesn't spring up 
   Chrome for Android
-  */     
-  user-select: none; 
+  */
+  user-select: none;
 }
 
-
-@media screen and (max-width: 400px){
-  .article-title { 
+@media screen and (max-width: 400px) {
+  .article-title {
     font-size: 2.3em;
   }
 }

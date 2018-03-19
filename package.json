@@ -7,7 +7,9 @@
     "test": "jest",
     "dev": "react-scripts start",
     "build": "mkdir public; react-scripts build; python manage.py collectstatic; rm -rf public",
-    "deploy": "clear; echo 'Make sure you are in Master and the working tree is ready to be commited.'; echo 'This command will ADD/COMMIT/PUSH and DEPLOY'; echo 'Press Ctrl+C to cancel and Enter to go ahead'; read; source ../bin/activate; mkdir public; react-scripts build; rm -rf public; ./manage.py collectstatic; read -p 'Enter commit message' cmtmsg; git add .; git commit -m \"$cmtmsg\"; git push origin master; eb deploy;"
+    "deploy": "clear; echo 'Make sure you are in Master and the working tree is ready to be commited.'; echo 'This command will ADD/COMMIT/PUSH and DEPLOY'; echo 'Press Ctrl+C to cancel and Enter to go ahead'; read; source ../bin/activate; mkdir public; react-scripts build; rm -rf public; ./manage.py collectstatic; read -p 'Enter commit message' cmtmsg; git add .; git commit -m \"$cmtmsg\"; git push origin master; eb deploy;",
+    "precommit": "lint-staged",
+    "format": "prettier --config prettier.config.js --write '**/*.{js,jsx,css}'"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,13 @@
   "bugs": {
     "url": "https://github.com/digi0ps/digiopsdotme-2.0/issues"
   },
-  "homepage": "http://digiops.me",
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "homepage": "http://digi0ps.com",
   "dependencies": {
     "axios": "^0.16.2",
     "gsap": "^1.19.1",
@@ -42,6 +50,8 @@
     "react-typing-animation": "^1.0.10"
   },
   "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
     "react-scripts": "^1.0.7"
   }
 }
