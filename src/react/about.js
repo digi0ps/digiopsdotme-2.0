@@ -20,7 +20,7 @@ class About extends React.Component {
         <div className="portfolio">
           <CSSTransitionGroup
             transitionName="fade"
-            transitionAppear={true}
+            transitionAppear
             transitionAppearTimeout={1000}
             transitionEnter={false}
             transitionLeaveTimeout={500}

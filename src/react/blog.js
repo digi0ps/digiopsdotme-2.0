@@ -105,7 +105,7 @@ class Blog extends React.Component {
       return (
         <CSSTransitionGroup
           transitionName="falldown"
-          transitionAppear={true}
+          transitionAppear
           transitionAppearTimeout={250}
           transitionEnter={false}
           transitionLeave={false}
