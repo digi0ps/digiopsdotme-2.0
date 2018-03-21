@@ -1,1 +1,1912 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"const",
+				"constants"
+			],
+			[
+				"MEME",
+				"MEMEX_LOGO_URL"
+			],
+			[
+				"disp",
+				"displayTime"
+			],
+			[
+				"comm",
+				"commonUIEntry"
+			],
+			[
+				"open",
+				"openChromeURL\t(index.js)"
+			],
+			[
+				"SEAR",
+				"SEARCH_ENGINES"
+			],
+			[
+				"is",
+				"is_registered\t(api_helper.js)"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"aria",
+				"aria-hidden=\"true\t(admin_streams_list.handlebars)"
+			],
+			[
+				"fch",
+				"fchoice\tChoiceField (fchoice)"
+			],
+			[
+				"po",
+				"popularity〔variable〕"
+			],
+			[
+				"glyp",
+				"glyphicon-chevron-up"
+			],
+			[
+				"col-",
+				"col-md-offset-3\t(thread.html)"
+			],
+			[
+				"is_",
+				"is_authenticated"
+			],
+			[
+				"bs3fo",
+				"bs3-form:label\tbs3-form-label"
+			],
+			[
+				"generi",
+				"generic.ListView"
+			],
+			[
+				"boot",
+				"bootbasic\t(bootstrap_basic.sublime-snippet)"
+			],
+			[
+				"col-xs-off",
+				"col-xs-offset-3\t(thambnails.html)"
+			],
+			[
+				"bs3temp",
+				"bs3-template:html5\tbs3-html5-template"
+			],
+			[
+				"button",
+				"bs3-button:danger\tbs3-button-danger"
+			],
+			[
+				"bs3-template",
+				"bs3-template:html5\tbs3-html5-template"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/index.js",
+			"settings":
+			{
+				"buffer_size": 526,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/react/gists/Tanglish/index.js",
+			"settings":
+			{
+				"buffer_size": 622,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/react/gists/Tanglish/data.js",
+			"settings":
+			{
+				"buffer_size": 2062,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 168.0,
+		"last_filter": "set syn less",
+		"selected_items":
+		[
+			[
+				"set syn less",
+				"Set Syntax: Less"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"set java",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"set syn js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set c",
+				"Set Syntax: C"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"set sy js",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"git dif",
+				"Git: Diff All Files"
+			],
+			[
+				"git di",
+				"Git: Diff All Files"
+			],
+			[
+				"istall",
+				"Package Control: Install Package"
+			],
+			[
+				"colo",
+				"Colorsublime: Browse Themes Online"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"install theme",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"python",
+				"SublimeREPL: Python"
+			],
+			[
+				"git diff",
+				"Git: Diff All Files"
+			],
+			[
+				"set mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"set c++",
+				"Set Syntax: C++"
+			],
+			[
+				"set mar",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"set json",
+				"Set Syntax: JSON"
+			],
+			[
+				"set ",
+				"Set Syntax: C"
+			],
+			[
+				"set c+",
+				"Set Syntax: C++"
+			],
+			[
+				"set python",
+				"Set Syntax: Python"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"set html",
+				"Set Syntax: HTML"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add al",
+				"Git: Add All"
+			],
+			[
+				"set javas",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"insert",
+				"Emoji: Insert Emoji"
+			],
+			[
+				"git ",
+				"Git: Commit history"
+			],
+			[
+				"packag",
+				"Package Control: List Packages"
+			],
+			[
+				"set cpp",
+				"Set Syntax: AppleScript"
+			],
+			[
+				"set sy c++",
+				"Set Syntax: C++"
+			],
+			[
+				"set php",
+				"Set Syntax: PHP"
+			],
+			[
+				"set js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set sy html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set sy py",
+				"Set Syntax: Python"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"git diff cur",
+				"Git: Diff Current File"
+			],
+			[
+				"git diff cu",
+				"Git: Diff Current File"
+			],
+			[
+				"git diff all",
+				"Git: Diff All Files"
+			],
+			[
+				"git diff al",
+				"Git: Diff All Files"
+			],
+			[
+				"git diff ",
+				"Git: Diff All Files"
+			],
+			[
+				"git statu",
+				"Git: Status"
+			],
+			[
+				"git add all",
+				"Git: Add All"
+			],
+			[
+				"git commit ",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add All"
+			],
+			[
+				"emoji",
+				"Emoji: Insert Emoji"
+			],
+			[
+				"git add ",
+				"Git: Add All"
+			],
+			[
+				"Git stat",
+				"Git: Status"
+			],
+			[
+				"get commit",
+				"Git: Amend Commit"
+			],
+			[
+				"git ocmmit",
+				"Git: Commit"
+			],
+			[
+				"git a",
+				"Git: Add All"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"git comi",
+				"Git: Commit"
+			],
+			[
+				"set syn py",
+				"Set Syntax: Python"
+			],
+			[
+				"set pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"add cur",
+				"Git: Add Current File"
+			],
+			[
+				"diff cur",
+				"Git: Diff Current File"
+			],
+			[
+				"diff all",
+				"Git: Diff All Files"
+			],
+			[
+				"git log",
+				"Git: Log All"
+			],
+			[
+				"git co",
+				"Git: Commit history"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"add all",
+				"Git: Add All"
+			],
+			[
+				"diff al",
+				"Git: Diff All Files"
+			],
+			[
+				"git di cu",
+				"Git: Diff Current File"
+			],
+			[
+				"h",
+				"HTMLBeautify"
+			],
+			[
+				"identation",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"html",
+				"HTMLBeautify"
+			],
+			[
+				"emo",
+				"Emoji: Insert Emoji"
+			],
+			[
+				"emoji: ",
+				"Emoji: Insert Emoji"
+			],
+			[
+				"set syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"",
+				"ANF: Copy Current File"
+			],
+			[
+				"set htlm",
+				"Set Syntax: HTML"
+			],
+			[
+				"set syntax htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"linter show",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"sublime pyt",
+				"SublimeREPL: Python"
+			],
+			[
+				"repl",
+				"SublimeREPL: Python"
+			],
+			[
+				"sub",
+				"SublimeREPL: Python"
+			],
+			[
+				"lorem",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"sub py",
+				"SublimeREPL: Python"
+			],
+			[
+				"repl py",
+				"SublimeREPL: Python"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 345.0,
+		"history":
+		[
+			"os.getcwd()",
+			"os.pwd()",
+			"import os",
+			"pwd()",
+			"ls",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/digiops/Code/digiops2/digiopsdotme2"
+	],
+	"file_history":
+	[
+		"/Users/digiops/Code/digiops2/digiopsdotme2/src/react/gists/Tanglish/training.js",
+		"/Users/digiops/Code/digiops2/digiopsdotme2/src/react/app.js",
+		"/Users/digiops/Code/digiops2/digiopsdotme2/.eslintignore",
+		"/Users/digiops/Code/digiops2/digiopsdotme2/.eslintrc.json",
+		"/Users/digiops/Code/digiops2/digiopsdotme2/package.json",
+		"/Users/digiops/Code/Memex/src/search-injection/components/Dropdown.css",
+		"/Users/digiops/Code/Memex/src/search-injection/constants.js",
+		"/Users/digiops/Code/Memex/src/search-injection/utils.js",
+		"/Users/digiops/Code/Memex/src/options/settings/components/SearchInjection.js",
+		"/Users/digiops/Code/Memex/src/manifest.json",
+		"/Users/digiops/Code/Memex/src/search-injection/components/Results.js",
+		"/Users/digiops/Code/Memex/src/search-injection/content_script.js",
+		"/Users/digiops/Code/Memex/src/search-injection/components/ResultItem.css",
+		"/Users/digiops/Code/Memex/src/search-injection/components/Results.css",
+		"/Users/digiops/Code/Memex/src/overview/components/Header.js",
+		"/Users/digiops/Code/Memex/src/options/settings/components/SearchInjection.css",
+		"/Users/digiops/Code/Memex/src/popup/constants.js",
+		"/Users/digiops/Code/Memex/src/popup/popup.js",
+		"/Users/digiops/Code/Memex/src/options/settings/components/Checkbox.css",
+		"/Users/digiops/Code/Memex/src/options/settings/index.js",
+		"/Users/digiops/Code/Memex/src/options/settings/components/Checkbox.js",
+		"/Users/digiops/Library/Application Support/Sublime Text 3/Packages/JsPrettier/CHANGELOG.md",
+		"/Users/digiops/Code/Memex/src/search-injection/components/Dropdown.js",
+		"/Users/digiops/Code/Memex/src/background.js",
+		"/Users/digiops/Code/Memex/src/search-injection/components/RemovedText.css",
+		"/Users/digiops/Code/Memex/src/content_script.js",
+		"/Users/digiops/Code/Memex/src/options/routes.js",
+		"/Users/digiops/Code/Memex/src/options/imports/components/Import.css",
+		"/Users/digiops/Code/Memex/src/search-injection/components/ResultItem.js",
+		"/Users/digiops/Code/Memex/src/search-injection/components/RemovedText.js",
+		"/Users/digiops/Code/Memex/gulpfile.babel.js",
+		"/Users/digiops/Code/Memex/src/options/containers/settings/style.css",
+		"/Users/digiops/Code/Memex/src/options/blacklist/components/base.css",
+		"/Users/digiops/Code/Memex/src/options/help/styles.css",
+		"/Users/digiops/Code/Memex/src/update/update.css",
+		"/Users/digiops/Code/Memex/src/options/base.css",
+		"/Users/digiops/Code/Memex/src/overview/components/TagPill.css",
+		"/Users/digiops/Code/Memex/src/common-ui/components/Modal.css",
+		"/Users/digiops/Code/Memex/src/overview/components/Overview.css",
+		"/Users/digiops/Code/Memex/worldbrain.sublime-project",
+		"/Users/digiops/Code/Memex/src/options/search-injection/index.js",
+		"/Users/digiops/Code/Memex/node_modules/acorn-jsx/node_modules/acorn/bin/generate-identifier-regex.js",
+		"/Users/digiops/Code/Memex/src/search-injection/background/index.js",
+		"/Users/digiops/Code/Memex/src/popup/container.js",
+		"/Users/digiops/Code/Memex/src/activity-logger/index.js",
+		"/Users/digiops/Code/Memex/src/search/search-index/search.js",
+		"/Users/digiops/Code/Memex/src/popup/components/Button.js",
+		"/Users/digiops/Code/Memex/src/popup/components/ButtonIcon.js",
+		"/Users/digiops/Code/Memex/src/common-ui/containers/OutLink.js",
+		"/Users/digiops/Code/Memex/src/popup/components/Popup.js",
+		"/Users/digiops/Code/Memex/extension/manifest.json",
+		"/Users/digiops/Code/Memex/extension/content_script.css",
+		"/Users/digiops/Code/Memex/src/options/tutorial/style.css",
+		"/Users/digiops/Code/Memex/src/search/search-index/tags/add.js",
+		"/Users/digiops/Code/Memex/src/search/background/index.js",
+		"/Users/digiops/Code/Memex/src/util/webextensionRPC.js",
+		"/Users/digiops/Code/Memex/src/options/blacklist/actions.js",
+		"/Users/digiops/Code/Memex/src/page-storage/deletion.js",
+		"/Users/digiops/Code/Memex/src/search/background/search-connection-handler.js",
+		"/Users/digiops/Code/Memex/src/page-storage/background/index.js",
+		"/Users/digiops/Code/Memex/src/bookmarks/background/deletion.js",
+		"/Users/digiops/Code/Memex/extension/content_script.js",
+		"/Users/digiops/Code/Memex/src/omnibar.js",
+		"/Users/digiops/Code/temp/cron/index.js",
+		"/Users/digiops/Code/Memex/src/overview/actions.js",
+		"/Users/digiops/Code/Memex/src/overview/components/PageResultItem.jsx",
+		"/Users/digiops/Code/Memex/src/overview/components/PageResultItem.css",
+		"/Users/digiops/Code/Memex/src/overview/components/ImgFromPouch.jsx",
+		"/Users/digiops/Code/Memex/src/search-injection/components/results.js",
+		"/Users/digiops/Code/Memex/src/overview/constants.js",
+		"/Users/digiops/Code/Memex/src/overview/components/Overview.jsx",
+		"/Users/digiops/Code/Memex/src/overview/container.js",
+		"/Users/digiops/Code/Memex/src/overview/index.js",
+		"/Users/digiops/Code/Memex/src/analytics/constants.js",
+		"/Users/digiops/Code/Memex/node_modules/async/constant.js",
+		"/Users/digiops/Code/WebMemex/src/search/query-builder.js",
+		"/Users/digiops/Code/WebMemex/src/search/search-index/search.js",
+		"/Users/digiops/Code/WebMemex/src/popup/container.js",
+		"/Users/digiops/Code/WebMemex/Readme.md",
+		"/Users/digiops/Code/wolfbeacon-dashboard/src/components/applications.js",
+		"/Users/digiops/Code/wolfbeacon-dashboard/src/components/dashboard.js",
+		"/Users/digiops/Code/test-prettier/package.json",
+		"/Users/digiops/Code/test-prettier/src/index.js",
+		"/Users/digiops/Code/test-prettier/index.js",
+		"/Users/digiops/Pictures/Us/Stuff.md",
+		"/Users/digiops/Downloads/datapackage.json",
+		"/Users/digiops/Desktop/data/airlines.csv",
+		"/Users/digiops/Downloads/college_shit/dataViz6/content/airlines.xlsx",
+		"/Users/digiops/Downloads/college_shit/data_viz_porj/SleepFormData.csv",
+		"/Users/digiops/Google Drive/College/Sem 4/Networks/udp/tcpchat/server.c",
+		"/Users/digiops/Google Drive/College/Sem 4/Networks/udp/tcpchat/client.c",
+		"/Users/digiops/Google Drive/College/Sem 4/Networks/udp/udp/udpServer.c",
+		"/Users/digiops/Google Drive/College/Sem 4/Networks/udp/udp/udpClient.c",
+		"/Users/digiops/Google Drive/College/Sem 4/Networks/udp/sruthi/udpServer.c",
+		"/Users/digiops/Google Drive/College/Sem 4/Networks/udp/sruthi/udpClient.c",
+		"/Users/digiops/Code/wolfbeacon-dashboard/src/components/application-card.js",
+		"/Users/digiops/Code/wolfbeacon-dashboard/src/components/statistics.js",
+		"/Users/digiops/Code/wolfbeacon-dashboard/src/components/navbar.js",
+		"/Users/digiops/Code/wolfbeacon-dashboard/src/components/home.js",
+		"/Users/digiops/Code/wolfbeacon-dashboard/src/components/search.js",
+		"/Users/digiops/Code/wolfbeacon-dashboard/src/components/login.js",
+		"/Users/digiops/Code/wolfbeacon-dashboard/src/css/index.css",
+		"/Users/digiops/Code/sortingAlgorithmsVisualised/src/components/Button.js",
+		"/Users/digiops/Code/sortingAlgorithmsVisualised/src/components/BarChart.js",
+		"/Users/digiops/Code/sortingAlgorithmsVisualised/src/App.js",
+		"/Users/digiops/Google Drive/College/Sem 4/Networks/udp/client.c",
+		"/Users/digiops/Google Drive/College/Sem 4/Networks/udp/server.c",
+		"/Users/digiops/.zshrc",
+		"/Users/digiops/.bash_profile",
+		"/Users/digiops/.hyper.js",
+		"/Users/digiops/Code/wolfbeacon-dashboard/node_modules/auth0-lock/lib/connection/database/login_pane.js",
+		"/Users/digiops/Code/inout/src/components/tag.js",
+		"/Users/digiops/Code/inout/src/components/input.js",
+		"/Users/digiops/Code/inout/src/components/main.js",
+		"/Users/digiops/Code/inout/package.json",
+		"/Users/digiops/Code/inout/src/index.js",
+		"/Users/digiops/Code/inout/README.md",
+		"/Users/digiops/Code/inout/public/index.html",
+		"/Users/digiops/Code/inout/src/components/index.js",
+		"/Users/digiops/Code/inout/src/css/index.css",
+		"/Users/digiops/Code/inout/src/js/app.js",
+		"/Users/digiops/Code/inout/main.html",
+		"/Users/digiops/Google Drive/College/Sem 4/OS/bootloader/thirdbl.asm",
+		"/Users/digiops/Google Drive/College/Sem 4/OS/bootloader/secondbl.asm",
+		"/Users/digiops/Google Drive/College/Sem 4/OS/bootloader/firstbl.asm",
+		"/Users/digiops/Google Drive/College/Sem 4/OS/firstBL.asm",
+		"/Users/digiops/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/digiops/Code/wolfbeacon-dashboard/src/components/router.js"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"d",
+			"trained",
+			"input",
+			"I think that I should start or at least think about starting it",
+			"english",
+			"trump"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 526,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								526,
+								526
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/react/gists/Tanglish/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 622,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								372,
+								372
+							]
+						],
+						"settings":
+						{
+							"_anf_new": "",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										381,
+										382
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										344,
+										345
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/react/gists/Tanglish/data.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2062,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1295,
+								1303
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										88,
+										89
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										75,
+										76
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1307,
+										1308
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1293,
+										1294
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 838.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 70.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "digiopsdotme2.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"searhconten",
+				"src/search-injection/content_script.js"
+			],
+			[
+				"mani",
+				"src/manifest.json"
+			],
+			[
+				"drop",
+				"src/search-injection/components/Dropdown.css"
+			],
+			[
+				"manife",
+				"src/manifest.json"
+			],
+			[
+				"searchconte",
+				"src/search-injection/content_script.js"
+			],
+			[
+				"resultjs",
+				"src/search-injection/components/Results.js"
+			],
+			[
+				"settingssearc",
+				"src/options/settings/components/SearchInjection.js"
+			],
+			[
+				"utils",
+				"src/search-injection/utils.js"
+			],
+			[
+				"searchinjeconstants",
+				"src/search-injection/constants.js"
+			],
+			[
+				"result",
+				"src/search-injection/components/Results.css"
+			],
+			[
+				"searchinjectioncon",
+				"src/search-injection/constants.js"
+			],
+			[
+				"popup",
+				"src/popup/popup.js"
+			],
+			[
+				"resultitem",
+				"src/search-injection/components/ResultItem.css"
+			],
+			[
+				"settingsindex",
+				"src/options/settings/index.js"
+			],
+			[
+				"settingsindex.js",
+				"src/options/settings/index.js"
+			],
+			[
+				"checkbo",
+				"src/options/settings/components/Checkbox.js"
+			],
+			[
+				"content",
+				"src/search-injection/content_script.js"
+			],
+			[
+				"removed",
+				"src/search-injection/components/RemovedText.css"
+			],
+			[
+				"check",
+				"src/options/settings/components/Checkbox.js"
+			],
+			[
+				"searchcontent",
+				"src/search-injection/content_script.js"
+			],
+			[
+				"contet",
+				"src/content_script.js"
+			],
+			[
+				"back",
+				"src/background.js"
+			],
+			[
+				"resultsjs",
+				"src/search-injection/components/Results.js"
+			],
+			[
+				"dropdown",
+				"src/search-injection/components/Dropdown.js"
+			],
+			[
+				"importcss",
+				"src/options/imports/components/Import.css"
+			],
+			[
+				"conte",
+				"src/search-injection/content_script.js"
+			],
+			[
+				"removedcs",
+				"src/search-injection/components/RemovedText.css"
+			],
+			[
+				"removedtextjs",
+				"src/search-injection/components/RemovedText.js"
+			],
+			[
+				"removedtext",
+				"src/search-injection/components/RemovedText.css"
+			],
+			[
+				"resultscss",
+				"src/search-injection/components/Results.css"
+			],
+			[
+				"constatns",
+				"src/search-injection/constants.js"
+			],
+			[
+				"resultitemjs",
+				"src/search-injection/components/ResultItem.js"
+			],
+			[
+				"css",
+				"src/options/containers/settings/style.css"
+			],
+			[
+				"gulp",
+				"gulpfile.babel.js"
+			],
+			[
+				"dropd",
+				"src/search-injection/components/Dropdown.css"
+			],
+			[
+				"overview.css",
+				"src/overview/components/Overview.css"
+			],
+			[
+				"results",
+				"src/search-injection/components/Results.js"
+			],
+			[
+				"const",
+				"src/search-injection/constants.js"
+			],
+			[
+				"resultitemcs",
+				"src/search-injection/components/ResultItem.css"
+			],
+			[
+				"removedtextcss",
+				"src/search-injection/components/RemovedText.css"
+			],
+			[
+				"search-injec",
+				"src/options/search-injection/index.js"
+			],
+			[
+				"results.js",
+				"src/search-injection/components/Results.js"
+			],
+			[
+				"backgrou",
+				"src/background.js"
+			],
+			[
+				"searchconsta",
+				"src/search-injection/constants.js"
+			],
+			[
+				"popupcontin",
+				"src/popup/container.js"
+			],
+			[
+				"button",
+				"src/popup/components/ButtonIcon.js"
+			],
+			[
+				"searchconstants",
+				"src/search-injection/constants.js"
+			],
+			[
+				"style.css",
+				"src/options/tutorial/style.css"
+			],
+			[
+				"resultcss",
+				"src/search-injection/components/ResultItem.css"
+			],
+			[
+				"gul",
+				"gulpfile.babel.js"
+			],
+			[
+				"searchinject",
+				"src/search-injection/constants.js"
+			],
+			[
+				"pagestorageindex",
+				"src/page-storage/background/index.js"
+			],
+			[
+				"deletion",
+				"src/page-storage/deletion.js"
+			],
+			[
+				"searchinjeccontent",
+				"src/search-injection/content_script.js"
+			],
+			[
+				"resu",
+				"src/search-injection/components/Results.js"
+			],
+			[
+				"webexte",
+				"src/util/webextensionRPC.js"
+			],
+			[
+				"manifest",
+				"extension/manifest.json"
+			],
+			[
+				"omn",
+				"src/omnibar.js"
+			],
+			[
+				"constants",
+				"src/search-injection/constants.js"
+			],
+			[
+				"pagere",
+				"src/overview/components/PageResultItem.css"
+			],
+			[
+				"imgf",
+				"src/overview/components/ImgFromPouch.jsx"
+			],
+			[
+				"overviewcontin",
+				"src/overview/container.js"
+			],
+			[
+				"overviewinde",
+				"src/overview/index.js"
+			],
+			[
+				"constants.js",
+				"src/analytics/constants.js"
+			],
+			[
+				"constant",
+				"src/popup/constants.js"
+			],
+			[
+				"index.css",
+				"src/css/index.css"
+			],
+			[
+				"navbar",
+				"src/components/navbar.js"
+			],
+			[
+				"tag",
+				"src/components/tag.js"
+			],
+			[
+				"search",
+				"src/components/search.js"
+			],
+			[
+				"applica",
+				"src/components/applications.js"
+			],
+			[
+				"dash",
+				"src/components/dashboard.js"
+			],
+			[
+				"api_he",
+				"src/utils/api_helper.js"
+			],
+			[
+				"login.js",
+				"src/components/login.js"
+			],
+			[
+				"auth0",
+				"node_modules/auth0-js/build/auth0.js"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"feat",
+				"features.html"
+			],
+			[
+				"how",
+				"how-it-works.html"
+			],
+			[
+				"about",
+				"about-us.html"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"pres",
+				"press.html"
+			],
+			[
+				"main",
+				"css/main.css"
+			],
+			[
+				"nav",
+				"node_modules/react-router-dom/NavLink.js"
+			],
+			[
+				"home.js",
+				"src/components/home.js"
+			],
+			[
+				"main.html",
+				"root/templates/main.html"
+			],
+			[
+				"article.css",
+				"src/css/article.css"
+			],
+			[
+				"apihelper",
+				"src/utils/api_helper.js"
+			],
+			[
+				"stat",
+				"src/components/statistics.js"
+			],
+			[
+				"stati",
+				"src/components/statistics.js"
+			],
+			[
+				"search.js",
+				"src/components/search.js"
+			],
+			[
+				"home",
+				"src/components/home.js"
+			],
+			[
+				"footer",
+				"src/components/footer.js"
+			],
+			[
+				"statis",
+				"src/components/statistics.js"
+			],
+			[
+				"views",
+				"blog/views.py"
+			],
+			[
+				"sett",
+				"root/settings.py"
+			],
+			[
+				"urls",
+				"blog/urls.py"
+			],
+			[
+				"rootur",
+				"root/urls.py"
+			],
+			[
+				"url",
+				"blog/urls.py"
+			],
+			[
+				"set",
+				"root/settings.py"
+			],
+			[
+				"super",
+				"blog/templates/blog/superuser_create.html"
+			],
+			[
+				"setting",
+				"root/settings.py"
+			],
+			[
+				"settings",
+				"root/settings.py"
+			],
+			[
+				"view",
+				"blog/views.py"
+			],
+			[
+				"form",
+				"blog/forms.py"
+			],
+			[
+				"model",
+				"blog/models.py"
+			],
+			[
+				"blogview",
+				"blog/views.py"
+			],
+			[
+				"articl",
+				"src/react/article.js"
+			],
+			[
+				"article.cs",
+				"src/css/article.css"
+			],
+			[
+				"arti",
+				"src/css/article.css"
+			],
+			[
+				"blog.css",
+				"src/css/blog.css"
+			],
+			[
+				"blog.js",
+				"src/react/blog.js"
+			],
+			[
+				"about.js",
+				"src/react/about.js"
+			],
+			[
+				"oldarticl",
+				"src/css/old/article.css"
+			],
+			[
+				"art",
+				"src/react/article.js"
+			],
+			[
+				"article",
+				"src/css/article.css"
+			],
+			[
+				"app.js",
+				"src/react/app.js"
+			],
+			[
+				"chat",
+				"src/react/chat/chat.css"
+			],
+			[
+				".css",
+				"src/css/app.css"
+			],
+			[
+				"login",
+				"home/templates/login.html"
+			],
+			[
+				"home.html",
+				"home/templates/home.html"
+			],
+			[
+				"create.",
+				"src/components/create.js"
+			],
+			[
+				"api.js",
+				"src/components/api.js"
+			],
+			[
+				"api.j",
+				"node_modules/loud-rejection/api.js"
+			],
+			[
+				"track",
+				"200/track200.js"
+			],
+			[
+				"track200.js",
+				"200/track200.js"
+			],
+			[
+				"helper",
+				"helper.js"
+			],
+			[
+				"main.js",
+				"public/js/app/main.js"
+			],
+			[
+				"fav",
+				"_includes/favicons.html"
+			],
+			[
+				"head",
+				"_includes/head.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 233.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
