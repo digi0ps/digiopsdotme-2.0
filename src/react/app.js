@@ -4,6 +4,7 @@ import Intro from "./intro.js";
 import Blog from "./blog.js";
 import Article from "./article.js";
 import About from "./about.js";
+import Tanglish from './gists/Tanglish';
 import Error404 from "./404.js";
 import "../css/app.css";
 
@@ -20,6 +21,7 @@ class App extends React.Component {
             <Route exact path="/blog" component={Blog} />
             <Route exact path="/chat" component={Chat} />
             <Route path="/blog/:id" component={Article} />
+            <Route path="/gists/tanglish" component={Tanglish} />
             <Route component={Error404} />
           </Switch>
         </div>
