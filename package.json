@@ -32,12 +32,6 @@
   "bugs": {
     "url": "https://github.com/digi0ps/digiopsdotme-2.0/issues"
   },
-  "lint-staged": {
-    "*.{js,json,css,md}": [
-      "prettier --config prettier.config.js --write",
-      "git add"
-    ]
-  },
   "homepage": "http://digi0ps.com",
   "dependencies": {
     "axios": "^0.16.2",
@@ -62,7 +56,6 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-standard": "^3.0.1",
-    "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
     "prettier": "^1.11.1",
     "react-scripts": "^1.0.7"
