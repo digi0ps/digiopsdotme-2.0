@@ -18,6 +18,8 @@ const Footer = () => {
 };
 
 const Viewers = () => {
+  const $viput = document.getElementById("viewers");
+  if (!$viput) return null;
   const viewers = document.getElementById("viewers").value;
   const n = viewers.length - 1;
   let sub;
