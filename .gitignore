@@ -16,3 +16,8 @@ secret_settings.py
 
 # NPM modules
 node_modules/*
+
+build/*
+/static/*
+
+app.yaml
