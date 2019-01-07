@@ -111,9 +111,9 @@ class Intro extends React.Component {
             <TypingAnimation />
           </div>
           <div className="links">
-            <Link to="/blog" className="link">
+            <a href="https://medium.com/@digi0ps" className="link">
               Blog
-            </Link>
+            </a>
             <a href="https://github.com/digi0ps" className="link">
               Github
             </a>

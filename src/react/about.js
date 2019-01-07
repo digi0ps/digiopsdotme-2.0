@@ -32,7 +32,7 @@ class About extends React.Component {
               Too lazy to read? Here's my Résumé -{" "}
               <a
                 target="blank"
-                href="https://drive.google.com/file/d/0B7z6-uPnrClMbkVnUG9VeXdEQ00/view?usp=sharing"
+                href="https://drive.google.com/file/d/1uMyFaM7TDQOSrssSWZvksSrUlJcE47td/view?usp=sharing"
                 className="resume-link"
               >
                 pdf
@@ -46,11 +46,13 @@ class About extends React.Component {
                 of July 1998 (18 years, yeah{" "}
                 <span role="img" aria-label="I rock hand">
                   🤘
-                </span>). I have been in Chennai for my entire life. Kinda get's
-                boring sometimes, but then Chennai is{" "}
+                </span>
+                ). I have been in Chennai for my entire life. Kinda get's boring
+                sometimes, but then Chennai is{" "}
                 <span role="img" aria-label="blue heart">
                   💙
-                </span>.
+                </span>
+                .
               </p>
               <p className="para center">
                 My passion for Computers started in 9th grade (2012). I got
@@ -65,8 +67,9 @@ class About extends React.Component {
                   target="blank"
                 >
                   here
-                </a>). It's a small game barely having a design but am still
-                proud of it. :')
+                </a>
+                ). It's a small game barely having a design but am still proud
+                of it. :')
               </p>
               <p className="para center">
                 I stopped learning Web Development after that. During my 11th
@@ -83,7 +86,8 @@ class About extends React.Component {
                 be found ->{" "}
                 <a href="https://github.com/digi0ps/PyBuilds" target="blank">
                   here
-                </a>).
+                </a>
+                ).
               </p>
               <p className="para center">
                 After my first semester ended, I decided I need to start web
