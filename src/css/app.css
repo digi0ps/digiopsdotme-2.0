@@ -63,6 +63,10 @@ a:hover {
 
 .bold {
   font-weight: 600;
+  display: block;
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+  /* font-size: 22px; */
 }
 
 .right {
