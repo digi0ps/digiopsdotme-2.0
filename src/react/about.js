@@ -83,7 +83,7 @@ class About extends React.Component {
             </div>
           </CSSTransitionGroup>
         </div>
-        <div className="top right">
+        <div className="top right none">
           <a href="#top">
             Back to top{" "}
             <span role="img" aria-label="pointing up finger">
