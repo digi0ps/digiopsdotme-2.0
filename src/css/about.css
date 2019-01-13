@@ -7,12 +7,34 @@
 }
 
 .portfolio a {
-  color: hsl(204, 86%, 53%);
+  color: #ef5350;
+  text-decoration: none;
+  position: relative;
+  z-index: 1000;
+  transition: all 0.5s ease-in;
 }
 
 .portfolio a:hover {
-  color: hsl(217, 71%, 53%);
-  text-decoration-color: hsl(217, 71%, 53%);
+  text-decoration: none;
+  color: #ef5350;
+}
+
+.portfolio a::before {
+  content: "";
+  background-color: #f44336;
+  width: 98%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 1%;
+  transition: all 0.3s ease-in;
+  transform: scaleX(0);
+  opacity: 0.3;
+}
+
+.portfolio a:hover::before {
+  opacity: 0.8;
+  transform: scale(1);
 }
 
 .header h1 {
