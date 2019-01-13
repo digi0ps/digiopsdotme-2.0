@@ -61,7 +61,7 @@
 }
 
 .link:hover {
-  color: white;
+  color: #222;
   text-decoration: underline;
   filter: brightness(2);
 }

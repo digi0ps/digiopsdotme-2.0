@@ -22,8 +22,8 @@ html {
 body {
   height: 100%;
   margin: 0;
-  background-color: #2b4496;
-  color: white;
+  background-color: #fafafa;
+  color: #444;
   font-family: system;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
@@ -32,12 +32,12 @@ body {
 }
 
 a {
-  color: white;
+  color: #444;
   text-decoration: none;
 }
 
 a:hover {
-  color: white;
+  color: #222;
   text-decoration: underline;
 }
 
@@ -53,7 +53,7 @@ a:hover {
 }
 
 .home-link:hover {
-  color: white;
+  color: #444;
   text-decoration: overline;
 }
 

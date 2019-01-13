@@ -7,17 +7,17 @@
 }
 
 .portfolio a {
-  color: #dfff00;
+  color: hsl(204, 86%, 53%);
 }
 
 .portfolio a:hover {
-  color: #dfff00;
-  text-decoration-color: #dfff00;
+  color: hsl(217, 71%, 53%);
+  text-decoration-color: hsl(217, 71%, 53%);
 }
 
 .header h1 {
   font-size: 50px;
-  font-weight: 400;
+  font-weight: 600;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
 }
@@ -31,8 +31,8 @@
   margin: 10px auto;
   height: 40px;
   line-height: 40px;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
 }
 
 .body {
