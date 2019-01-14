@@ -1,7 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { CSSTransitionGroup } from "react-transition-group";
-import { Link } from "react-router-dom";
 import HomeLink from "./homelink.js";
 import "../css/about.css";
 
@@ -29,6 +28,7 @@ class About extends React.Component {
               Looking for my{" "}
               <a
                 target="blank"
+                rel="nooperner noreferrer"
                 href="https://drive.google.com/file/d/1uMyFaM7TDQOSrssSWZvksSrUlJcE47td/view?usp=sharing"
                 className="resume-link"
               >
@@ -44,7 +44,11 @@ class About extends React.Component {
                 have become a huge fan of React and have garnered considerable
                 experience in it. You can find out more about my professional
                 experiences in{" "}
-                <a href="https://www.linkedin.com/in/digi0ps/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/digi0ps/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   LinkedIn
                 </a>
                 .
@@ -59,7 +63,11 @@ class About extends React.Component {
                 I started coding young when I was in 9th grade but only became
                 serious after I started university. I love Open Source and have
                 been contributing on{" "}
-                <a href="https://github.com/digi0ps" target="_blank">
+                <a
+                  href="https://github.com/digi0ps"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Github
                 </a>{" "}
                 since 2013. I'm passionate about the web and get super excited
@@ -72,13 +80,10 @@ class About extends React.Component {
                 maintaining a healthy diet and working out regularly.
               </p>
               <p className="para">
-                If you wanna have a few words with me drop me{" "}
+                If you wanna have a few words with me, drop me a{" "}
                 <a href="mailto:sriru1998@gmail.com">mail</a>. I also actively
-                share a few memes and sometimes rant on{" "}
-                <a href="https://twitter.com/_digi0ps" target="_blank">
-                  twitter
-                </a>
-                .
+                share few stuff and rant on{" "}
+                <a href="https://twitter.com/_digi0ps">twitter</a>.
               </p>
             </div>
           </CSSTransitionGroup>

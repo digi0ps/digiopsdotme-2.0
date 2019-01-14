@@ -72,6 +72,11 @@
   right: 10px;
 }
 
+.footer a {
+  color: #666;
+  font-size: 11px;
+}
+
 .viewers {
   position: absolute;
   bottom: 10px;
@@ -92,6 +97,10 @@
     -ms-user-select: none;
     user-select: none;
   }
+
+  .footer {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -103,5 +112,9 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+  }
+
+  .footer {
+    display: none;
   }
 }
