@@ -29,7 +29,7 @@ class About extends React.Component {
               <a
                 target="blank"
                 rel="nooperner noreferrer"
-                href="https://drive.google.com/file/d/1uMyFaM7TDQOSrssSWZvksSrUlJcE47td/view?usp=sharing"
+                href="https://drive.google.com/file/d/1pZrKLyT8bTEwpJgS_G_ng4STAhP7g_2R/view?usp=sharing"
                 className="resume-link"
               >
                 Résumé
