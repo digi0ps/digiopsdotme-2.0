@@ -34,7 +34,7 @@
   },
   "homepage": "http://digi0ps.com",
   "dependencies": {
-    "acorn": "^6.0.0",
+    "acorn": "^6.4.1",
     "axios": "^0.18.0",
     "brain.js": "^1.1.2",
     "gsap": "^2.0.2",
